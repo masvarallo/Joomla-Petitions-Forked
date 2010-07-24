@@ -1,16 +1,16 @@
 <?php
 //Joomla Petitions v 1.5 //
 /**
-* @ Package Joomla Petitions 
-* @version $Id: liste_pays_french.php 2008-08-14
+* @ Package Joomla Petitions
 * @ Copyright (C) 2007 - 2008 Milos Colic - All rights reserved
 * @ Powered by Milos Colic - www.joomlapetitions.com
 * @ All rights reserved
 * @ Joomla Petitions Component is Free Software
 * @ Released under GNU/GPL License : http://www.gnu.org/copyleft/gpl.html
 */
+//TODO country list
 ?>
-<option value="">-----------  Selectionnez votre pays d'origine  -----------
+<option value="">-----------  Select your country  -----------
 <option value=ad>Andorre
 <option value=af>Afghanistan
 <option value=za>Afrique du Sud
@@ -57,7 +57,7 @@
 <option value=kr>Cor&eacute;e (R&eacute;publique de )
 <option value=kp>Cor&eacute;e (R&eacute;publique populaire d&eacute;mocratique de)
 <option value=cr>Costa Rica
-<option value=ci>Côte d'Ivoire
+<option value=ci>Cï¿½te d'Ivoire
 <option value=hr>Croatie
 <option value=cu>Cuba
 <option value=dk>Danemark
@@ -85,19 +85,19 @@
 <option value=gq>Guin&eacute;e &eacute;quatoriale
 <option value=gw>Guin&eacute;e-Bissau
 <option value=gy>Guyana
-<option value=gf>Guyane française
+<option value=gf>Guyane franï¿½aise
 <option value=ht>Ha&iuml;ti
 <option value=hn>Honduras
 <option value=hk>Hong-Kong
 <option value=hu>Hongrie
-<option value=fö>Iles F&eacute;ro&eacute;
+<option value=fï¿½>Iles F&eacute;ro&eacute;
 <option value=in>Inde
 <option value=id>Indon&eacute;sie
 <option value=iq>Irak
 <option value=ir>Iran
 <option value=ie>Irlande
 <option value=is>Islande
-<option value=il>Israël
+<option value=il>Israï¿½l
 <option value=it>Italie
 <option value=jm>Jama&iuml;que
 <option value=jp>Japon
@@ -150,12 +150,12 @@
 <option value=pe>P&eacute;rou
 <option value=ph>Philippines
 <option value=pl>Pologne
-<option value=pf>Polyn&eacute;sie française
+<option value=pf>Polyn&eacute;sie franï¿½aise
 <option value=pr>Porto Rico
 <option value=pt>Portugal
-<option value=qc>Qu&eacute;bec 
+<option value=qc>Qu&eacute;bec
 <option value=cf>R&eacute;publique centrafricaine
-<option value=dd>R&eacute;publique d&eacute;mocratique allemande [RDA] (1949-1990) 
+<option value=dd>R&eacute;publique d&eacute;mocratique allemande [RDA] (1949-1990)
 <option value=do>R&eacute;publique Dominicaine
 <option value=cz>R&eacute;publique Tch&agrave;que
 <option value=ro>Roumanie
@@ -192,7 +192,7 @@
 <option value=tm>Turkmenistan
 <option value=tr>Turquie
 <option value=ua>Ukraine
-<option value=su>Union Sovi&eacute;tique 
+<option value=su>Union Sovi&eacute;tique
 <option value=uy>Uruguay
 <option value=va>Vatican
 <option value=ve>Venezuela

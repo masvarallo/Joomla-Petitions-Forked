@@ -1,7 +1,7 @@
 <?php
 //Joomla Petitions v 1.5 //
 /**
-* @ Package Joomla Petitions 
+* @ Package Joomla Petitions
 * @version $Id: controller.php 2008-08-14
 * @ Copyright (C) 2007 - 2008 Milos Colic - All rights reserved
 * @ Powered by Milos Colic - www.joomlapetitions.com
@@ -45,14 +45,14 @@ class PetitionsController extends JController
 		parent::display();
 	}
 	//end display
-	
+
 	function captcha()
 	{
 		global $mainframe;
 		$params =& $mainframe->getParams('com_petitions');
-		
+
 		require_once JPATH_COMPONENT . DS . 'captcha' . DS . 'securimage.php';
-				
+
 		$document = &JFactory::getDocument();
 		$doc = &JDocument::getInstance('raw');
 		$document = $doc;
@@ -60,7 +60,7 @@ class PetitionsController extends JController
 		$img->ttf_file = JPATH_COMPONENT . DS . 'captcha' . DS . 'elephant.ttf';
 		$img->show();
 	}
-	
+
 	function PetitionsFooter($version) {
 
 	?>
