@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/component-install.dtd">
 <install type="component" version="1.5.0">
-	<name>Petitions</name>
-	<author>Milos Colic</author>
-	<creationDate>Septembre 2008</creationDate>
-	<copyright>(C) 2008 Milos Colic. All rights reserved.</copyright>
-	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
-	<authorEmail>master.flash@free.fr</authorEmail>
-	<authorUrl>www.joomlapetitions.com</authorUrl>
+	<name>Joomla Petitions Fork</name>
+	<author>Kissaki</author>
+	<creationDate>July 2010</creationDate>
+	<license>GPL2</license>
+	<authorEmail>kissaki@gmx.de</authorEmail>
+	<authorUrl>kcode.de</authorUrl>
 	<version>1.5.0</version>
-	<description>This component is a nativ Joomla 1.5 Petitions Component</description>
+	<description>Component allows hosting petitions and ppl. to sign them. This is a forked project, forked from JoomlaPetition to improve and fix it.</description>
 	<files folder="site">
 		<filename>petitions.php</filename>
 		<filename>controller.php</filename>
@@ -54,6 +53,7 @@
 		<filename>views/petition/tmpl/index.html</filename>
 	</files>
 	<languages>
+		<language tag="de-DE">site/languages/de-DE.com_petitions.ini</language>
 		<language tag="fr-FR">site/languages/fr-FR.com_petitions.ini</language>
 		<language tag="en-GB">site/languages/en-GB.com_petitions.ini</language>
 	</languages>
