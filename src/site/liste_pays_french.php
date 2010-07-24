@@ -10,7 +10,7 @@
 */
 //TODO country list
 ?>
-<option value="">-----------  Select your country  -----------
+<option value="" selected="selected">-----------  Select your country  -----------
 <option value=ad>Andorre
 <option value=af>Afghanistan
 <option value=za>Afrique du Sud

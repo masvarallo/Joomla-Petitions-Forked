@@ -148,8 +148,8 @@
 			</td>
 			<td width="84%">
 				<?php /*//TODO this is gender*/ ?>
-				<select style="width:150px;" class="inputbox" size="1" id="petitiontitle" name="title" value="<?php echo $this->escape($this->petition->title);?>">
-					<option value=""><?php echo JText::_( '--- Choose ---' ); ?></option>
+				<select style="width:150px;" class="inputbox" size="1" id="petitiontitle" name="title">
+					<option value="" selected="selected"><?php echo JText::_( '--- Choose ---' ); ?></option>
 					<option><?php echo JText::_( 'Civilite1' ); ?></option>
 					<option><?php echo JText::_( 'Civilite2' ); ?></option>
 					<option><?php echo JText::_( 'Civilite3' ); ?></option>
@@ -185,14 +185,15 @@
 					<label for="petitionage">
 						<?php echo JText::_( 'Age' ); ?> :		</label>	</td>
 				<td width="84%">
-					<select style="width:60px;" class="inputbox" size="1" id="petitionage" name="age" value="<?php echo $this->escape($this->petition->age);?>" />
-					<option value="">-----</option>
-					<option>- 18</option>
-					<option>18-29</option>
-					<option>30-39</option>
-					<option>40-49</option>
-					<option>50-59</option>
-					<option>+ 59</option>
+					<select style="width:60px;" class="inputbox" size="1" id="petitionage" name="age">
+						<option value="" selected="selected">-----</option>
+						<option>- 18</option>
+						<option>18-29</option>
+						<option>30-39</option>
+						<option>40-49</option>
+						<option>50-59</option>
+						<option>+ 59</option>
+					</select>
 			    </td>
 			</tr>
 		<?php endif; ?>
@@ -243,7 +244,7 @@
 				</label>
 			</td>
 			<td width="84%">
-				<select style="width:330px;" size="1" id="petitionlocalisation4" name="localisation4" value="<?php echo $this->escape($this->petition->localisation4);?>">
+				<select style="width:330px;" size="1" id="petitionlocalisation4" name="localisation4">
 					<?php
 						if (file_exists(JPATH_COMPONENT.DS.'liste_pays_$lang.php')) {
 							include(JPATH_COMPONENT.DS.'liste_pays_$lang.php');
@@ -272,10 +273,11 @@
 			<tr>
 				<td valign="top">
 					<label for="petitionURL">
-						<?php echo JText::_( 'URL' ); ?> :		</label>	</td>
+						<?php echo JText::_( 'URL' ); ?> :
+					</label>
+				</td>
 				<td>
-				<td>
-					<input class="inputbox" type="text" id="url" name="url" value="<?php echo $this->petition->url; ?>" size="50" maxlength="100" />	</td>
+					<input class="inputbox" type="text" id="url" name="url" value="<?php echo $this->petition->url; ?>" size="50" maxlength="100" />
 				</td>
 			</tr>
 		<?php endif; ?>
@@ -299,9 +301,10 @@
 						<?php echo JText::_( 'Code obligatoire' ); ?>
 					</span> * :
 				</td>
-				<td align="left" height="40"><img id="code" src="index.php?option=com_petitions&task=captcha" align="absmiddle" />
+				<td align="left" height="40">
+					<img id="code" src="index.php?option=com_petitions&task=captcha" />
 					<a href="javascript:reloadCAPTCHA();">
-						<img valign='middle' src='components/com_petitions/images/reload.gif' title='Recharger le code' alt='Recharger le code' border='0' />
+						<img src='components/com_petitions/images/reload.gif' title='Recharger le code' alt='Recharger le code' border='0' />
 					</a>
 					<input type="text" id="ck_captcha_code" name="ck_captcha_code" size="15" maxlength="8" />
 				</td>
