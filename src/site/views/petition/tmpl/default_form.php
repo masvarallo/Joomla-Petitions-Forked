@@ -142,7 +142,9 @@
 		<?php endif; ?>
 		<tr>
 			<td width="16%">
-				<label for="petitiontitle"><?php echo JText::_( 'Civilite' ); ?> :</label>
+				<label for="petitiontitle">
+					<?php echo JText::_( 'Civilite' ); ?> :
+				</label>
 			</td>
 			<td width="84%">
 				<?php /*//TODO this is gender*/ ?>
@@ -157,7 +159,9 @@
 		<tr>
 			<td width="16%">
 				<label for="petitionsurname">
-					<?php echo JText::_( 'Surname' ); ?> * :		</label>	</td>
+					<?php echo JText::_( 'Surname' ); ?> * :
+				</label>
+			</td>
 			<td width="84%">
 				<input class="inputbox required"  type="text" id="surname" name="surname" size="50" maxlength="250" value="<?php echo $this->escape($this->petition->surname);?>" />	</td>
 		</tr>
@@ -176,108 +180,138 @@
 				<input class="inputbox" type="text" id="petitionorganisation" name="organisation" size="50" maxlength="250" value="<?php echo $this->escape($this->petition->organisation);?>" />	</td>
 		</tr>
 		<?php if ($this->params->get('champ_age',0)) : ?>
-		<tr>
-			<td width="16%">
-				<label for="petitionage">
-					<?php echo JText::_( 'Age' ); ?> :		</label>	</td>
-			<td width="84%">
-				<select style="width:60px;" class="inputbox" size="1" id="petitionage" name="age" value="<?php echo $this->escape($this->petition->age);?>" />
-				<option value="">-----</option>
-				<option>- 18</option>
-				<option>18-29</option>
-				<option>30-39</option>
-				<option>40-49</option>
-				<option>50-59</option>
-				<option>+ 59</option>
-		    </td>
-		</tr>
+			<tr>
+				<td width="16%">
+					<label for="petitionage">
+						<?php echo JText::_( 'Age' ); ?> :		</label>	</td>
+				<td width="84%">
+					<select style="width:60px;" class="inputbox" size="1" id="petitionage" name="age" value="<?php echo $this->escape($this->petition->age);?>" />
+					<option value="">-----</option>
+					<option>- 18</option>
+					<option>18-29</option>
+					<option>30-39</option>
+					<option>40-49</option>
+					<option>50-59</option>
+					<option>+ 59</option>
+			    </td>
+			</tr>
 		<?php endif; ?>
 		<?php if ($this->params->get('champ_profession',0)) : ?>
-		<tr>
-			<td width="16%">
-				<label for="petitionprofession">
-					<?php echo JText::_( 'Profession' ); ?>:		</label>	</td>
-			<td width="84%">
-				<input class="inputbox" type="text" id="petitionprofession" name="profession" size="50" maxlength="100" value="<?php echo $this->escape($this->petition->profession);?>" />	</td>
-		</tr>
+			<tr>
+				<td width="16%">
+					<label for="petitionprofession">
+						<?php echo JText::_( 'Profession' ); ?>:
+					</label>
+				</td>
+				<td width="84%">
+					<input class="inputbox" type="text" id="petitionprofession" name="profession" size="50" maxlength="100" value="<?php echo $this->escape($this->petition->profession);?>" />
+				</td>
+			</tr>
 		<?php endif; ?>
 		<tr>
 			<td width="16%">
 				<label for="petitionlocalisation">
-					<?php echo JText::_( 'Localisation' ); ?> :		</label>	</td>
+					<?php echo JText::_( 'Localisation' ); ?> :
+				</label>
+			</td>
 			<td width="84%">
-				<input class="inputbox" type="text" id="petitionlocalisation" name="localisation" size="50" maxlength="100" value="<?php echo $this->escape($this->petition->localisation);?>" />	</td>
+				<input class="inputbox" type="text" id="petitionlocalisation" name="localisation" size="50" maxlength="100" value="<?php echo $this->escape($this->petition->localisation);?>" />
+			</td>
 		</tr>
 		<tr>
 			<td width="16%">
 				<label for="petitionlocalisation2">
-					<?php echo JText::_( 'Localisation2' ); ?> :		</label>	</td>
+					<?php echo JText::_( 'Localisation2' ); ?> :
+				</label>
+			</td>
 			<td width="84%">
-				<input class="inputbox" type="text" id="petitionlocalisation2" name="localisation2" size="50" maxlength="15" value="<?php echo $this->escape($this->petition->localisation2);?>" />	</td>
+				<input class="inputbox" type="text" id="petitionlocalisation2" name="localisation2" size="50" maxlength="15" value="<?php echo $this->escape($this->petition->localisation2);?>" />
+			</td>
 		</tr>
 		<tr>
 			<td width="16%">
 				<label for="petitionlocalisation3">
 					<?php echo JText::_( 'Localisation3' ); ?> :		</label>	</td>
 			<td width="84%">
-				<input class="inputbox" type="text" id="petitionlocalisation3" name="localisation3" size="50" maxlength="100" value="<?php echo $this->escape($this->petition->localisation3);?>" />	</td>
+				<input class="inputbox" type="text" id="petitionlocalisation3" name="localisation3" size="50" maxlength="100" value="<?php echo $this->escape($this->petition->localisation3);?>" />
+			</td>
 		</tr>
 		<tr>
 			<td width="16%">
 				<label for="petitionlocalisation4">
-					<?php echo JText::_( 'Localisation4' ); ?> :		</label>	</td>
+					<?php echo JText::_( 'Localisation4' ); ?> :
+				</label>
+			</td>
 			<td width="84%">
-			<select style="width:330px;" size="1" id="petitionlocalisation4" name="localisation4" value="<?php echo $this->escape($this->petition->localisation4);?>" />
-			<?php
-			if (file_exists(JPATH_COMPONENT.DS.'liste_pays_$lang.php')) {
-			include(JPATH_COMPONENT.DS.'liste_pays_$lang.php');
-				} else {
-				include(JPATH_COMPONENT.DS.'liste_pays_french.php');
-			}
-			?>	</td>
+				<select style="width:330px;" size="1" id="petitionlocalisation4" name="localisation4" value="<?php echo $this->escape($this->petition->localisation4);?>">
+					<?php
+						if (file_exists(JPATH_COMPONENT.DS.'liste_pays_$lang.php')) {
+							include(JPATH_COMPONENT.DS.'liste_pays_$lang.php');
+						} else {
+							include(JPATH_COMPONENT.DS.'liste_pays_french.php');
+						}
+					?>
+				</select>
+			</td>
 		</tr>
 		<tr>
 			<td valign="top">
 				<label for="petitionmail">
-					<?php echo JText::_( 'Mail' ); ?> * :		</label>	</td>
+					<?php echo JText::_( 'Mail' ); ?> * :
+				</label>
+			</td>
 			<td>
 				<input class="inputbox required validate-email" type="text" id="mail" name="mail" value="<?php echo $this->petition->mail; ?>" size="50" maxlength="100" />
-
 				<input type="checkbox" name="edit" id="petitionedit" value="1" class="inputbox required" />
-						<label for="petitionedit">
-							<?php echo JText::_( 'Edit mail' ); ?>				</label>	</td>
-		</tr>
-		<?php if ($this->params->get('champ_url',0)) : ?>
-		<tr>
-			<td valign="top">
-				<label for="petitionURL">
-					<?php echo JText::_( 'URL' ); ?> :		</label>	</td>
-			<td>
-				<input class="inputbox" type="text" id="url" name="url" value="<?php echo $this->petition->url; ?>" size="50" maxlength="100" />	</td>
-		</tr>
-		<?php endif; ?>
-		<?php if ($this->params->get('champ_commentaire',0)) : ?>
-		<tr>
-			<td valign="top">
-				<label for="petitioncomment">
-					<?php echo JText::_( 'Comment' ); ?> :		</label>	</td>
-			<td>
-				<textarea class="inputbox" cols="30" rows="6" id="petitioncomment" name="comment" style="width:330px" onkeyup="Compter(this, this.form.CharRestant);"><?php echo $this->escape( $this->petition->comment);?></textarea><br>Nombre de caract�res restant : <input type='text' name='CharRestant' size='2' disabled='disabled'></td>
-		</tr>
-		<?php endif; ?>
-		<?php if ($this->params->get('use_captcha',0)) : ?>
-		<tr>
-		  <td align="left" height="40">&nbsp;<span class="ck_mandatory ckhidden"><?php echo JText::_( 'Code obligatoire' ); ?></span> * :
-		</td>
-		  <td align="left" height="40"><img id="code" src="index.php?option=com_petitions&task=captcha" align="absmiddle" />
-		    <a href="javascript:reloadCAPTCHA();"><img  valign='middle' src='components/com_petitions/images/reload.gif' title='Recharger le code' alt='Recharger le code' border='0'></a>
-			<input type="text" id="ck_captcha_code" name="ck_captcha_code" size="15" maxlength="8" />
+				<label for="petitionedit">
+					<?php echo JText::_( 'Edit mail' ); ?>
+				</label>
 			</td>
 		</tr>
+		<?php if ($this->params->get('champ_url',0)) : ?>
+			<tr>
+				<td valign="top">
+					<label for="petitionURL">
+						<?php echo JText::_( 'URL' ); ?> :		</label>	</td>
+				<td>
+				<td>
+					<input class="inputbox" type="text" id="url" name="url" value="<?php echo $this->petition->url; ?>" size="50" maxlength="100" />	</td>
+				</td>
+			</tr>
+		<?php endif; ?>
+		<?php if ($this->params->get('champ_commentaire',0)) : ?>
+			<tr>
+				<td valign="top">
+					<label for="petitioncomment">
+						<?php echo JText::_( 'Comment' ); ?> :
+					</label>
+				</td>
+				<td>
+					<textarea class="inputbox" cols="30" rows="6" id="petitioncomment" name="comment" style="width:330px" onkeyup="Compter(this, this.form.CharRestant);"><?php echo $this->escape( $this->petition->comment);?></textarea><br/>
+					<?php echo JText::_( 'Number of remaining Chars' ); ?> : <input type='text' name='CharRestant' size='2' disabled='disabled'>
+				</td>
+			</tr>
+		<?php endif; ?>
+		<?php if ($this->params->get('use_captcha',0)) : ?>
+			<tr>
+				<td align="left" height="40">
+					<span class="ck_mandatory ckhidden">
+						<?php echo JText::_( 'Code obligatoire' ); ?>
+					</span> * :
+				</td>
+				<td align="left" height="40"><img id="code" src="index.php?option=com_petitions&task=captcha" align="absmiddle" />
+					<a href="javascript:reloadCAPTCHA();">
+						<img valign='middle' src='components/com_petitions/images/reload.gif' title='Recharger le code' alt='Recharger le code' border='0' />
+					</a>
+					<input type="text" id="ck_captcha_code" name="ck_captcha_code" size="15" maxlength="8" />
+				</td>
+			</tr>
 		<?php endif; ?>
 
-		<td colspan="2" height="40">
-		<?php echo JText::_( 'Champs obligatoires' ); ?>
+		<tr>
+			<td colspan="2" height="40">
+				<?php echo JText::_( 'Champs obligatoires' ); ?>
+			</td>
 		</tr>
 	</table>
 
