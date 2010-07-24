@@ -1,90 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 <config>
-	<params>
+  <params>
     <param name="use_captcha" type="radio" default="0" label="USE CAPTCHA" description="USE THE CAPTCHA ANTI-SPAM UTILITY" >
-        <option value="0">No</option>
-        <option value="1">Yes</option>
-	</param>
-	<param name="long_code" type="text" default="5" label="LONGUEUR CODE CAPTCHA" description="NOMBRE MAXI DE CARACTERES POUR LE CODE CAPTCHA" menu="hide" />
-	<param name="@spacer" type="spacer" default="" label="" description="" />
-	<param name="champ_ip" type="radio" default="0" label="USE IP" description="UTILISATION CHAMP IP" >
-        <option value="0">No</option>
-        <option value="1">Yes</option>
+      <option value="0">No</option>
+      <option value="1">Yes</option>
     </param>
-	<param name="champ_age" type="radio" default="0" label="USE AGE" description="UTILISATION CHAMP AGE" >
-        <option value="0">No</option>
-        <option value="1">Yes</option>
+    <param name="long_code" type="text" default="5" label="LONGUEUR CODE CAPTCHA" description="NOMBRE MAXI DE CARACTERES POUR LE CODE CAPTCHA" menu="hide" />
+    <param name="@spacer" type="spacer" default="" label="" description="" />
+    <param name="champ_ip" type="radio" default="0" label="USE IP" description="UTILISATION CHAMP IP" >
+      <option value="0">No</option>
+      <option value="1">Yes</option>
     </param>
-	<param name="champ_profession" type="radio" default="0" label="USE PROFESSION" description="UTILISATION CHAMP PROFESSION" >
-        <option value="0">No</option>
-        <option value="1">Yes</option>
+    <param name="champ_age" type="radio" default="0" label="USE AGE" description="UTILISATION CHAMP AGE" >
+      <option value="0">No</option>
+      <option value="1">Yes</option>
     </param>
-	<param name="champ_url" type="radio" default="0" label="USE URL" description="UTILISATION CHAMP URL" >
-        <option value="0">No</option>
-        <option value="1">Yes</option>
+    <param name="champ_profession" type="radio" default="0" label="USE PROFESSION" description="UTILISATION CHAMP PROFESSION" >
+      <option value="0">No</option>
+      <option value="1">Yes</option>
     </param>
-	<param name="champ_commentaire" type="radio" default="0" label="USE COMMENTAIRE" description="UTILISATION CHAMP COMMENTAIRE" >
-        <option value="0">No</option>
-        <option value="1">Yes</option>
+    <param name="champ_url" type="radio" default="0" label="USE URL" description="UTILISATION CHAMP URL" >
+      <option value="0">No</option>
+      <option value="1">Yes</option>
     </param>
-	<param name="maxi_mots" type="text" default="200" label="MAXIMUM CARACTERES" description="NOMBRE MAXI DE CARACTERES DANS LE CHAMP COMMENTAIRE" menu="hide" />
-	<param name="@spacer" type="spacer" default="" label="" description="" />
-	<param name="col_mail" type="radio" default="0" label="USE COL MAIL" description="UTILISATION COL MAIL" >
-        <option value="0">No</option>
-        <option value="1">Yes</option>
+    <param name="champ_commentaire" type="radio" default="0" label="USE COMMENTAIRE" description="UTILISATION CHAMP COMMENTAIRE" >
+      <option value="0">No</option>
+      <option value="1">Yes</option>
     </param>
-	<param name="col_profession" type="radio" default="0" label="USE COL PROFESSION" description="UTILISATION COL PROFESSION" >
-        <option value="0">No</option>
-        <option value="1">Yes</option>
+    <param name="maxi_mots" type="text" default="200" label="MAXIMUM CARACTERES" description="NOMBRE MAXI DE CARACTERES DANS LE CHAMP COMMENTAIRE" menu="hide" />
+    <param name="@spacer" type="spacer" default="" label="" description="" />
+    <param name="col_mail" type="radio" default="0" label="USE COL MAIL" description="UTILISATION COL MAIL" >
+      <option value="0">No</option>
+      <option value="1">Yes</option>
     </param>
-	<param name="col_organisation" type="radio" default="0" label="USE COL ORGANISATION" description="UTILISATION COL ORGANISATION" >
-        <option value="0">No</option>
-        <option value="1">Yes</option>
-    </param>	
-	<param name="col_date" type="radio" default="0" label="USE COL DATE" description="UTILISATION COL DATE" >
-        <option value="0">No</option>
-        <option value="1">Yes</option>
-    </param>	
-	<param name="col_comment" type="radio" default="0" label="USE COL COMMENT" description="UTILISATION COL COMMENTAIRE" >
-        <option value="0">No</option>
-        <option value="1">Yes</option>
-    </param>	
-	<param name="@spacer" type="spacer" default="" label="" description="" />
-	<param name="affichage_signataires" type="radio" default="0" label="AFFICHAGE SIGNATAIRES" description="AFFICHAGE DES SIGNATAIRES" >
-        <option value="0">No</option>
-        <option value="1">Yes</option>
-    </param>	
-	<param name="form_affmas" type="radio" default="0" label="BUT AFFICHE MASQUE FORM" description="BUTTON AFFICHAGER OU MASQUER LE FORMULAIRE" >
-        <option value="0">No</option>
-        <option value="1">Yes</option>
+    <param name="col_profession" type="radio" default="0" label="USE COL PROFESSION" description="UTILISATION COL PROFESSION" >
+      <option value="0">No</option>
+      <option value="1">Yes</option>
     </param>
-	<param name="form_masque" type="radio" default="0" label="FORM MASQUE" description="FORMULAIRE TOUJOURS MASQUER" >
-        <option value="0">No</option>
-        <option value="1">Yes</option>
+    <param name="col_organisation" type="radio" default="0" label="USE COL ORGANISATION" description="UTILISATION COL ORGANISATION" >
+      <option value="0">No</option>
+      <option value="1">Yes</option>
     </param>
-	<param name="signataires_masque" type="radio" default="0" label="MASQUE LISTE DES SIGNATAIRES" description="MASQUE LA LISTE DES SIGNATAIRES" >
-        <option value="0">No</option>
-        <option value="1">Yes</option>
+    <param name="col_date" type="radio" default="0" label="USE COL DATE" description="UTILISATION COL DATE" >
+      <option value="0">No</option>
+      <option value="1">Yes</option>
     </param>
-	<param name="affichage_mode_liste" type="radio" default="0" label="MODE LISTE" description="AFFICHAGE MODE LISTE" >
-        <option value="0">No</option>
-        <option value="1">Yes</option>
+    <param name="col_comment" type="radio" default="0" label="USE COL COMMENT" description="UTILISATION COL COMMENTAIRE" >
+      <option value="0">No</option>
+      <option value="1">Yes</option>
     </param>
-	<param name="dateformat" type="text" default="Y-m-d H:i:s" label="LABEL DATE FORMAT" description="DESC DATE FORMAT"/>
-	<param name="@spacer" type="spacer" default="" label="" description="" />
-	<param name="copie_webmaster" type="radio" default="0" label="COPIE WEBMASTER" description="ENVOYER UNE COPIE AU WEBMASTER" >
-        <option value="0">No</option>
-        <option value="1">Yes</option>
+    <param name="@spacer" type="spacer" default="" label="" description="" />
+    <param name="affichage_signataires" type="radio" default="0" label="AFFICHAGE SIGNATAIRES" description="AFFICHAGE DES SIGNATAIRES" >
+      <option value="0">No</option>
+      <option value="1">Yes</option>
     </param>
-	<param name="mail_webmaster" type="text" default="yourmail@free.fr" label="MAIL WEBMASTER" description="MAIL DU WABMASTER"  />
-	<param name="validation_signature" type="radio" default="0" label="VALIDATION SIGNATURE" description="VALIDATION DE LA SIGNATURE PAR LE SIGNATAIRE" >
-        <option value="0">No</option>
-        <option value="1">Yes</option>
+    <param name="form_affmas" type="radio" default="0" label="BUT AFFICHE MASQUE FORM" description="BUTTON AFFICHAGER OU MASQUER LE FORMULAIRE" >
+      <option value="0">No</option>
+      <option value="1">Yes</option>
     </param>
-		<param name="@spacer" type="spacer" default="" label="" description="" />
+    <param name="form_masque" type="radio" default="0" label="FORM MASQUE" description="FORMULAIRE TOUJOURS MASQUER" >
+      <option value="0">No</option>
+      <option value="1">Yes</option>
+    </param>
+    <param name="signataires_masque" type="radio" default="0" label="MASQUE LISTE DES SIGNATAIRES" description="MASQUE LA LISTE DES SIGNATAIRES" >
+      <option value="0">No</option>
+      <option value="1">Yes</option>
+    </param>
+    <param name="affichage_mode_liste" type="radio" default="0" label="MODE LISTE" description="AFFICHAGE MODE LISTE" >
+      <option value="0">No</option>
+      <option value="1">Yes</option>
+    </param>
+    <param name="dateformat" type="text" default="Y-m-d H:i:s" label="LABEL DATE FORMAT" description="DESC DATE FORMAT"/>
+    <param name="@spacer" type="spacer" default="" label="" description="" />
+    <param name="copie_webmaster" type="radio" default="0" label="COPIE WEBMASTER" description="ENVOYER UNE COPIE AU WEBMASTER" >
+      <option value="0">No</option>
+      <option value="1">Yes</option>
+    </param>
+    <param name="mail_webmaster" type="text" default="yourmail@free.fr" label="MAIL WEBMASTER" description="MAIL DU WABMASTER"  />
+    <param name="validation_signature" type="radio" default="0" label="VALIDATION SIGNATURE" description="VALIDATION DE LA SIGNATURE PAR LE SIGNATAIRE" >
+      <option value="0">No</option>
+      <option value="1">Yes</option>
+    </param>
+      <param name="@spacer" type="spacer" default="" label="" description="" />
     <param name="viewgid" type="permissiongroup" default="0" label="LABEL VIEW GROUP" description="DESC VIEW GROUP"  />
     <param name="postgid" type="permissiongroup" default="0" label="LABEL POST GROUP" description="DESC POST GROUP"  />
     <param name="moderatorgid" type="permissiongroup" default="23" label="MODERATOR GROUP" description="DESC MODERATOR GROUP"  />
     <param name="disallowednames" type="textarea" rows="3" cols="40"  default="'admin','moder','manag'" label="LABEL DISALLOWED NAMES" description="DESC DISALLOWED NAMES"  menu="hide" />
-</params>
+  </params>
 </config>
