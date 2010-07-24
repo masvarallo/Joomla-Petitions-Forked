@@ -35,7 +35,7 @@
 	</td>
 	<?php endif; ?>
 	<td width="20%" height="20" class="sectiontableheader<?php echo $this->params->get( 'pageclass_sfx' ); ?>">
-		<?php 
+		<?php
 		$surnamename = JText::_( 'surname', true ).' '.JText::_( 'name', true );
 		echo JHTML::_('grid.sort',  $surnamename, 'surname', $this->lists['order_Dir'], $this->lists['order'] ); ?>
 	</td>
@@ -52,7 +52,7 @@
 	<td width="20%" height="20" class="sectiontableheader<?php echo $this->params->get( 'pageclass_sfx' ); ?>">
 		<?php echo JHTML::_('grid.sort',  'Ville', 'localisation3', $this->lists['order_Dir'], $this->lists['order'] ); ?>
 	</td>
-	
+
 	<?php if ($this->params->get('col_comment',0)) : ?>
 	<td width="20%" height="20" class="sectiontableheader<?php echo $this->params->get( 'pageclass_sfx' ); ?>">
 		<?php echo JHTML::_('grid.sort',  'Comment', 'comment', $this->lists['order_Dir'], $this->lists['order'] ); ?>
@@ -85,7 +85,7 @@
 	</td>
 	<?php endif; ?>
 	<td>
-	<?php echo $item->surname; ?> <?php echo $item->name; ?> 
+	<?php echo $item->surname; ?> <?php echo $item->name; ?>
 	</td>
 	<?php if ($this->params->get('col_profession',0)) : ?>
 	<td>
@@ -104,15 +104,26 @@
 	<td>
 	<?php
 		if ($item->comment) {
-            $img = 'publish_g.png';
+			$img = 'publish_g.png';
 			$textcomment = $item->comment;
-        } else{
-            $img = 'publish_r.png';
+		} else{
+			$img = 'publish_r.png';
 			$textcomment = JText::_( 'Pas de commentaire' );
-        }    
+		}
 	?>
-	<a href="javascript: void(0);"  onmouseover="return overlib('<table style=background-color:#CCC; border=0 width=100% height=100%><tr ><td style=background-color:#FFF;><?php echo $textcomment; ?></td></tr></table>', CAPTION, '<?php echo JText::_( 'Commentaire du signataire' );?>', BELOW, RIGHT);" onmouseout="return nd();"/><img src="administrator/images/<?php echo $img;?>" width="15" height="15" border="0" alt="" /></a>
-	
+	<a
+		href="javascript:void(0);"
+		onmouseover="return overlib(
+			'<div style="background-color:#ffffff;"><?php echo $textcomment; ?></div>',
+			CAPTION,
+			'<div style="background-color:#000000;"><?php echo JText::_( 'Signee Comment' );?></div>',
+			BELOW,
+			RIGHT);"
+		onmouseout="return nd();"
+		>
+		<img src="administrator/images/<?php echo $img;?>" width="15" height="15" border="0" alt="" />
+	</a>
+
 	</td>
 	<?php endif; ?>
 

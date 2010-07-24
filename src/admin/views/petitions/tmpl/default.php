@@ -103,9 +103,9 @@
 			</td>
 			<td>
 				<?php echo $checked; ?>
-            <td align="center">
-                <?php echo JHTML::_('date', $row->date, "%d %B %Y %H:%M") ?>
-            </td>
+				<td align="center">
+				<?php echo JHTML::_('date', $row->date, "%d %B %Y %H:%M") ?>
+				</td>
 			<td align="center">
 				<?php
 				if (  JTable::isCheckedOut($this->user->get ('id'), $row->checked_out ) ) {
@@ -127,16 +127,16 @@
 			</td>
 			<?php
 			if ($row->comment) {
-              	$img = 'publish_g.png';
+				$img = 'publish_g.png';
 				$textcomment = $row->comment;
-              } else{
-              	$img = 'publish_r.png';
+			} else{
+				$img = 'publish_r.png';
 				$textcomment = JText::_( 'Pas de commentaire' );
-              } 
-            
+			}
+
 			?>
 			<td align="center" >
-			<a href="javascript: void(0);"  onmouseover="return overlib('<table class=\'Tooltip\' border=0 width=100% height=100%><tr><td><?php echo $textcomment; ?></td></tr></table>', CAPTION, '<?php echo JText::_( 'Commentaire du signataire' );?>', BELOW, RIGHT);" onmouseout="return nd();"/><img src="images/<?php echo $img;?>" width="15" height="15" border="0" alt="" /></a>
+			<a href="javascript: void(0);"  onmouseover="return overlib('<table class=\'Tooltip\' border=0 width=100% height=100%><tr><td><?php echo $textcomment; ?></td></tr></table>', CAPTION, '<?php echo JText::_( 'Signee Comment' );?>', BELOW, RIGHT);" onmouseout="return nd();"/><img src="images/<?php echo $img;?>" width="15" height="15" border="0" alt="" /></a>
 			</td>
 			<td align="center">
 				<?php echo $published;?>
