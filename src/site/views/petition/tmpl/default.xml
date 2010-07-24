@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="PETITION STANDARD CATEGORY LAYOUT">
+		<message>
+			<![CDATA[PETITION STANDARD CATEGORY LAYOUT DESC]]>
+		</message>
+	</layout>
+	<state>
+		<name>PETITION STANDARD CATEGORY LAYOUT</name>
+		<description>PETITION STANDARD CATEGORY LAYOUT DESC</description>
+		<url>
+			<param name="id" type="category" section="com_petitions" default="0" label="Category" description="PARAMCATSELECT" />
+		</url>
+		<params>
+			<param name="show_feed_link" type="radio" default="1" label="Show a feed link" description="PARAMSHOWFEEDLINK">
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+			</param>
+		</params>
+	</state>
+</metadata>

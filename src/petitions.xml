@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/component-install.dtd">
+<install type="component" version="1.5.0">
+	<name>Petitions</name>
+	<author>Milos Colic</author>
+	<creationDate>Septembre 2008</creationDate>
+	<copyright>(C) 2008 Milos Colic. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>master.flash@free.fr</authorEmail>
+	<authorUrl>www.joomlapetitions.com</authorUrl>
+	<version>1.5.0</version>
+	<description>This component is a nativ Joomla 1.5 Petitions Component</description>
+	<files folder="site">
+		<filename>petitions.php</filename>
+		<filename>controller.php</filename>
+		<filename>metadata.xml</filename>
+		<filename>liste_pays_french.php</filename>
+		<filename>index.html</filename>
+		<filename>captcha/index.html</filename>
+		<filename>captcha/elephant.ttf</filename>
+		<filename>captcha/securimage.php</filename>
+		<filename>captcha/gdfonts/automatic.gdf</filename>
+		<filename>captcha/gdfonts/bubblebath.gdf</filename>
+		<filename>captcha/gdfonts/caveman.gdf</filename>
+		<filename>captcha/gdfonts/crass.gdf</filename>
+		<filename>captcha/images/audio_icon.gif</filename>
+		<filename>captcha/images/refresh.gif</filename>
+		<filename>controllers/index.html</filename>
+		<filename>controllers/petition.php</filename>
+		<filename>helpers/index.html</filename>
+		<filename>helpers/route.php</filename>
+		<filename>images/index.html</filename>
+		<filename>images/comment.png</filename>
+		<filename>images/email.png</filename>
+		<filename>images/reload.gif</filename>
+		<filename>models/petition.php</filename>
+		<filename>models/petitions.php</filename>
+		<filename>models/index.html</filename>
+		<filename>views/index.html</filename>
+		<filename>views/petitions/view.html.php</filename>
+		<filename>views/petitions/metadata.xml</filename>
+		<filename>views/petitions/index.html</filename>
+		<filename>views/petitions/tmpl/default.php</filename>
+		<filename>views/petitions/tmpl/default.xml</filename>
+		<filename>views/petitions/tmpl/index.html</filename>
+		<filename>views/petition/view.html.php</filename>
+		<filename>views/petition/view.feed.php</filename>
+		<filename>views/petition/metadata.xml</filename>
+		<filename>views/petition/index.html</filename>
+		<filename>views/petition/tmpl/default.php</filename>
+		<filename>views/petition/tmpl/default.xml</filename>
+		<filename>views/petition/tmpl/default_items.php</filename>
+		<filename>views/petition/tmpl/default_form.php</filename>
+		<filename>views/petition/tmpl/index.html</filename>
+	</files>
+	<languages>
+		<language tag="fr-FR">site/languages/fr-FR.com_petitions.ini</language>
+		<language tag="en-GB">site/languages/en-GB.com_petitions.ini</language>
+	</languages>
+	<installfile>install.petitions.php</installfile>
+	<install>
+		<sql>
+			<file charset="utf8" driver="mysql">install_petitions.sql</file>
+			<file driver="mysql">install_petitions.nonutf8.sql</file>
+		</sql>
+	</install>
+	<administration>
+		<menu ink="option=com_petitions">Petitions</menu>
+		<submenu>
+		<menu img="components/com_petitions/images/signataires.png" link="option=com_petitions">Signataires</menu>
+		<menu img="components/com_petitions/images/petitions.png" link="option=com_categories&amp;amp;section=com_petitions">Petitions</menu>
+		<menu img="components/com_petitions/images/export.png" link="option=com_petitions&amp;amp;controller=export">Export signataires</menu>
+		<menu img="components/com_petitions/images/about.png" link="option=com_petitions&amp;amp;task=about">A propos</menu>
+		</submenu>
+		<files folder="admin">
+				<filename>install_petitions.sql</filename>
+				<filename>install_petitions.nonutf8.sql</filename>
+				<filename>install.petitions.php</filename>
+				<filename>uninstall.petitions.php</filename>
+				<filename>uninstall.sql</filename>
+				<filename>config.xml</filename>
+				<filename>controller.php</filename>
+				<filename>index.html</filename>
+				<filename>petitions.php</filename>
+				<filename>images/index.html</filename>
+				<filename>images/signataires.png</filename>
+				<filename>images/petitions.png</filename>
+				<filename>images/export.png</filename>
+				<filename>images/donate_button.png</filename>
+				<filename>images/about.png</filename>
+				<filename>controllers/export.php</filename>
+				<filename>controllers/index.html</filename>
+				<filename>images/logojoomlapetitions.png</filename>
+				<filename>models/export.php</filename>
+				<filename>models/petitions.php</filename>
+				<filename>models/petition.php</filename>
+				<filename>models/index.html</filename>
+				<filename>tables/petition.php</filename>
+				<filename>tables/index.html</filename>
+				<filename>views/index.html</filename>
+				<filename>views/about/view.html.php</filename>
+				<filename>views/about/index.html</filename>
+				<filename>views/about/tmpl/default.php</filename>
+				<filename>views/about/tmpl/index.html</filename>
+				<filename>views/export/view.html.php</filename>
+				<filename>views/export/index.html</filename>
+				<filename>views/export/tmpl/default.php</filename>
+				<filename>views/export/tmpl/index.html</filename>
+				<filename>views/petitions/view.html.php</filename>
+				<filename>views/petitions/index.html</filename>
+				<filename>views/petitions/tmpl/default.php</filename>
+				<filename>views/petitions/tmpl/index.html</filename>
+				<filename>views/petition/view.html.php</filename>
+				<filename>views/petition/index.html</filename>
+				<filename>views/petition/tmpl/form.php</filename>
+				<filename>views/petition/tmpl/index.html</filename>
+		</files>
+		<languages>
+			<language tag="fr-FR">admin/languages/fr-FR.com_petitions.ini</language>
+			<language tag="fr-FR">admin/languages/fr-FR.com_petitions.menu.ini</language>
+			<language tag="en-GB">admin/languages/en-GB.com_petitions.ini</language>
+			<language tag="en-GB">admin/languages/en-GB.com_petitions.menu.ini</language>
+		</languages>
+	</administration>
+</install>
