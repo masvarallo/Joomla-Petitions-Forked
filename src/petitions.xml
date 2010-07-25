@@ -2,13 +2,27 @@
 <!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/component-install.dtd">
 <install type="component" version="1.5.0">
 	<name>Joomla Petitions Fork</name>
-	<author>Kissaki</author>
 	<creationDate>July 2010</creationDate>
-	<license>GPL2</license>
+	<author>Kissaki</author>
 	<authorEmail>kissaki@gmx.de</authorEmail>
 	<authorUrl>kcode.de</authorUrl>
-	<version>1.5.0</version>
+	<license>GPL2</license>
+	<copyright></copyright>
+	<version>0.1.0</version>
 	<description>Component allows hosting petitions and ppl. to sign them. This is a forked project, forked from JoomlaPetition to improve and fix it.</description>
+	<installfile>install.petitions.php</installfile>
+	<uninstallfile>uninstall.petitions.php</uninstallfile>
+	<install>
+		<sql>
+			<file charset="utf8" driver="mysql">install_petitions.sql</file>
+			<file driver="mysql">install_petitions.nonutf8.sql</file>
+		</sql>
+	</install>
+	<uninstall>
+		<queries>
+			<query>DROP TABLE IF EXISTS `#__petitions_signataires`;</query>
+		</queries>
+	</uninstall>
 	<files folder="site">
 		<filename>petitions.php</filename>
 		<filename>controller.php</filename>
@@ -58,15 +72,8 @@
 		<language tag="fr-FR">site/languages/fr-FR.com_petitions.ini</language>
 		<language tag="en-GB">site/languages/en-GB.com_petitions.ini</language>
 	</languages>
-	<installfile>install.petitions.php</installfile>
-	<install>
-		<sql>
-			<file charset="utf8" driver="mysql">install_petitions.sql</file>
-			<file driver="mysql">install_petitions.nonutf8.sql</file>
-		</sql>
-	</install>
 	<administration>
-		<menu ink="option=com_petitions">Petitions</menu>
+		<menu link="option=com_petitions">Petitions</menu>
 		<submenu>
 		<menu img="components/com_petitions/images/signataires.png" link="option=com_petitions">Signataires</menu>
 		<menu img="components/com_petitions/images/petitions.png" link="option=com_categories&amp;amp;section=com_petitions">Petitions</menu>

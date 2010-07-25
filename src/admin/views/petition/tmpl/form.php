@@ -51,7 +51,7 @@
 		<legend><?php echo JText::_( 'Details' ); ?></legend>
 
 		<table class="admintable">
-		
+
 		<tr>
 			<td width="100" align="right" class="key">
 				<label for="ip">
@@ -95,7 +95,7 @@
 		</tr>
 		<tr>
 			<td width="100" align="right" class="key">
-				<label for="organisation>
+				<label for="organisation">
 					<?php echo JText::_( 'Organisation' ); ?> :
 				</label>
 			</td>
@@ -193,7 +193,7 @@
 			<td>
 				<input class="text_area" type="text" name="localisation4" id="localisation4" size="32" maxlength="250" value="<?php echo $this->petition->localisation4;?>" />
 			</td>
-		</tr>		
+		</tr>
 		<tr>
 			<td valign="top" align="right" class="key">
 				<?php echo JText::_( 'Approved' ); ?> :
@@ -202,7 +202,7 @@
 				<?php echo $this->lists['approved']; ?>
 			</td>
 		</tr>
-		
+
 		<tr>
 			<td valign="top" align="right" class="key">
 				<?php echo JText::_( 'Published' ); ?> :
