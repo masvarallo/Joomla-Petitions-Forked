@@ -49,201 +49,195 @@
 <div class="col width-50">
 	<fieldset class="adminform">
 		<legend><?php echo JText::_( 'Details' ); ?></legend>
-
 		<table class="admintable">
-
-		<tr>
-			<td width="100" align="right" class="key">
-				<label for="ip">
-					<?php echo JText::_( 'IP' ); ?> :
-				</label>
-			</td>
-			<td>
-				<input class="text_area" type="text" name="ip" id="ip" size="32" maxlength="100" value="<?php echo $this->petition->ip;?>" />
-			</td>
-		</tr>
-		<tr>
-		<tr>
-			<td width="100" align="right" class="key">
-				<label for="title">
-					<?php echo JText::_( 'Civilite' ); ?> :
-				</label>
-			</td>
-			<td>
-				<input class="text_area" type="text" name="title" id="title" size="32" maxlength="30" value="<?php echo $this->petition->title;?>" />
-			</td>
-		</tr>
-		<tr>
-			<td width="100" align="right" class="key">
-				<label for="surname">
-					<?php echo JText::_( 'Surname' ); ?> :
-				</label>
-			</td>
-			<td>
-				<input class="text_area" type="text" name="surname" id="surname" size="32" maxlength="100" value="<?php echo $this->petition->surname;?>" />
-			</td>
-		</tr>
-		<tr>
-			<td width="100" align="right" class="key">
-				<label for="name">
-					<?php echo JText::_( 'Name' ); ?> :
-				</label>
-			</td>
-			<td>
-				<input class="text_area" type="text" name="name" id="name" size="32" maxlength="100" value="<?php echo $this->petition->name;?>" />
-			</td>
-		</tr>
-		<tr>
-			<td width="100" align="right" class="key">
-				<label for="organisation">
-					<?php echo JText::_( 'Organisation' ); ?> :
-				</label>
-			</td>
-			<td>
-				<input class="text_area" type="text" name="organisation" id="organisation" size="32" maxlength="250" value="<?php echo $this->petition->organisation;?>" />
-			</td>
-		</tr>
-		<tr>
-			<td width="100" align="right" class="key">
-				<label for="mail">
-					<?php echo JText::_( 'Email' ); ?> :
-				</label>
-			</td>
-			<td>
-				<input class="text_area" type="text" name="mail" id="mail" size="32" maxlength="250" value="<?php echo $this->petition->mail;?>" />
-			</td>
-		</tr>
-		<tr>
-            <td width="100" align="right" class="key">
-                <label for="edit">
-                    <?php echo JText::_( 'Show' ); ?> <?php echo JText::_( 'Mail' ); ?>:
-                </label>
-            </td>
-            <td>
-            	<input class="text_area" type="radio" name="edit" id="edit" value="y" <?php if($this->petition->edit=='y'){echo "checked='checked'";} ?> /><?php echo JText::_( 'Yes' ); ?>
-                <input class="text_area" type="radio" name="edit" id="edit" value="n" <?php if($this->petition->edit=='n'){echo "checked='checked'";} ?> /><?php echo JText::_( 'No' ); ?>
-            </td>
-        </tr>
-		<tr>
-			<td valign="top" align="right" class="key">
-				<label for="url">
-					<?php echo JText::_( 'URL' ); ?> :
-				</label>
-			</td>
-			<td>
-				<input class="text_area" type="text" name="url" id="url" value="<?php echo $this->petition->url; ?>" size="32" maxlength="250" />
-			</td>
-		</tr>
-		<tr>
-			<td width="100" align="right" class="key">
-				<label for="age">
-					<?php echo JText::_( 'Age' ); ?> :
-				</label>
-			</td>
-			<td>
-				<input class="text_area" type="text" name="age" id="age" size="32" maxlength="250" value="<?php echo $this->petition->age;?>" />
-			</td>
-		</tr>
-		<tr>
-			<td width="100" align="right" class="key">
-				<label for="profession">
-					<?php echo JText::_( 'Profession' ); ?> :
-				</label>
-			</td>
-			<td>
-				<input class="text_area" type="text" name="profession" id="profession" size="32" maxlength="250" value="<?php echo $this->petition->profession;?>" />
-			</td>
-		</tr>
-		<tr>
-			<td width="100" align="right" class="key">
-				<label for="localisation">
-					<?php echo JText::_( 'Localisation' ); ?> :
-				</label>
-			</td>
-			<td>
-				<input class="text_area" type="text" name="localisation" id="localisation" size="32" maxlength="250" value="<?php echo $this->petition->localisation;?>" />
-			</td>
-		</tr>
-		<tr>
-			<td width="100" align="right" class="key">
-				<label for="localisation2">
-					<?php echo JText::_( 'Localisation2' ); ?> :
-				</label>
-			</td>
-			<td>
-				<input class="text_area" type="text" name="localisation2" id="localisation2" size="32" maxlength="250" value="<?php echo $this->petition->localisation2;?>" />
-			</td>
-		</tr>
-		<tr>
-			<td width="100" align="right" class="key">
-				<label for="localisation3">
-					<?php echo JText::_( 'Localisation3' ); ?> :
-				</label>
-			</td>
-			<td>
-				<input class="text_area" type="text" name="localisation3" id="localisation3" size="32" maxlength="250" value="<?php echo $this->petition->localisation3;?>" />
-			</td>
-		</tr>
-		<tr>
-			<td width="100" align="right" class="key">
-				<label for="localisation4">
-					<?php echo JText::_( 'Localisation4' ); ?> :
-				</label>
-			</td>
-			<td>
-				<input class="text_area" type="text" name="localisation4" id="localisation4" size="32" maxlength="250" value="<?php echo $this->petition->localisation4;?>" />
-			</td>
-		</tr>
-		<tr>
-			<td valign="top" align="right" class="key">
-				<?php echo JText::_( 'Approved' ); ?> :
-			</td>
-			<td>
-				<?php echo $this->lists['approved']; ?>
-			</td>
-		</tr>
-
-		<tr>
-			<td valign="top" align="right" class="key">
-				<?php echo JText::_( 'Published' ); ?> :
-			</td>
-			<td>
-				<?php echo $this->lists['published']; ?>
-			</td>
-		</tr>
-		        <tr>
-            <td width="100" align="right" class="key">
-                <label for="date">
-                    <?php echo JText::_( 'Date' ); ?>:
-                </label>
-            </td>
-            <td>
-                <?php echo JHTML::_('calendar', $this->petition->date, 'date', 'date', '%Y-%m-%d %H:%M:%S', array('class'=>'text_area', 'size'=>'32',  'maxlength'=>'19')); ?>
-            </td>
-        </tr>
-        <tr>
-		<tr>
-			<td valign="top" align="right" class="key">
-				<label for="catid">
-					<?php echo JText::_( 'Category' ); ?> :
-				</label>
-			</td>
-			<td>
-				<?php echo $this->lists['catid']; ?>
-			</td>
-		</tr>
-
-		<tr>
-			<td valign="top" align="right" class="key">
-				<label for="ordering">
-					<?php echo JText::_( 'Ordering' ); ?> :
-				</label>
-			</td>
-			<td>
-				<?php echo $this->lists['ordering']; ?>
-			</td>
-		</tr>
-	</table>
+			<tr>
+				<td width="100" align="right" class="key">
+					<label for="ip">
+						<?php echo JText::_( 'IP' ); ?> :
+					</label>
+				</td>
+				<td>
+					<input class="text_area" type="text" name="ip" id="ip" size="32" maxlength="100" value="<?php echo $this->petition->ip;?>" />
+				</td>
+			</tr>
+			<tr>
+				<td width="100" align="right" class="key">
+					<label for="title">
+						<?php echo JText::_( 'Civilite' ); ?> :
+					</label>
+				</td>
+				<td>
+					<input class="text_area" type="text" name="title" id="title" size="32" maxlength="30" value="<?php echo $this->petition->title;?>" />
+				</td>
+			</tr>
+			<tr>
+				<td width="100" align="right" class="key">
+					<label for="surname">
+						<?php echo JText::_( 'Surname' ); ?> :
+					</label>
+				</td>
+				<td>
+					<input class="text_area" type="text" name="surname" id="surname" size="32" maxlength="100" value="<?php echo $this->petition->surname;?>" />
+				</td>
+			</tr>
+			<tr>
+				<td width="100" align="right" class="key">
+					<label for="name">
+						<?php echo JText::_( 'Name' ); ?> :
+					</label>
+				</td>
+				<td>
+					<input class="text_area" type="text" name="name" id="name" size="32" maxlength="100" value="<?php echo $this->petition->name;?>" />
+				</td>
+			</tr>
+			<tr>
+				<td width="100" align="right" class="key">
+					<label for="organisation">
+						<?php echo JText::_( 'Organisation' ); ?> :
+					</label>
+				</td>
+				<td>
+					<input class="text_area" type="text" name="organisation" id="organisation" size="32" maxlength="250" value="<?php echo $this->petition->organisation;?>" />
+				</td>
+			</tr>
+			<tr>
+				<td width="100" align="right" class="key">
+					<label for="mail">
+						<?php echo JText::_( 'Email' ); ?> :
+					</label>
+				</td>
+				<td>
+					<input class="text_area" type="text" name="mail" id="mail" size="32" maxlength="250" value="<?php echo $this->petition->mail;?>" />
+				</td>
+			</tr>
+			<tr>
+				<td width="100" align="right" class="key">
+					<label for="edit">
+						<?php echo JText::_( 'Show' ); ?> <?php echo JText::_( 'Mail' ); ?>:
+					</label>
+				</td>
+				<td>
+					<input class="text_area" type="radio" name="edit" id="edit" value="y" <?php if($this->petition->edit=='y'){echo "checked='checked'";} ?> /><?php echo JText::_( 'Yes' ); ?>
+					<input class="text_area" type="radio" name="edit" id="edit" value="n" <?php if($this->petition->edit=='n'){echo "checked='checked'";} ?> /><?php echo JText::_( 'No' ); ?>
+				</td>
+			</tr>
+			<tr>
+				<td valign="top" align="right" class="key">
+					<label for="url">
+						<?php echo JText::_( 'URL' ); ?> :
+					</label>
+				</td>
+				<td>
+					<input class="text_area" type="text" name="url" id="url" value="<?php echo $this->petition->url; ?>" size="32" maxlength="250" />
+				</td>
+			</tr>
+			<tr>
+				<td width="100" align="right" class="key">
+					<label for="age">
+						<?php echo JText::_( 'Age' ); ?> :
+					</label>
+				</td>
+				<td>
+					<input class="text_area" type="text" name="age" id="age" size="32" maxlength="250" value="<?php echo $this->petition->age;?>" />
+				</td>
+			</tr>
+			<tr>
+				<td width="100" align="right" class="key">
+					<label for="profession">
+						<?php echo JText::_( 'Profession' ); ?> :
+					</label>
+				</td>
+				<td>
+					<input class="text_area" type="text" name="profession" id="profession" size="32" maxlength="250" value="<?php echo $this->petition->profession;?>" />
+				</td>
+			</tr>
+			<tr>
+				<td width="100" align="right" class="key">
+					<label for="localisation">
+						<?php echo JText::_( 'Localisation' ); ?> :
+					</label>
+				</td>
+				<td>
+					<input class="text_area" type="text" name="localisation" id="localisation" size="32" maxlength="250" value="<?php echo $this->petition->localisation;?>" />
+				</td>
+			</tr>
+			<tr>
+				<td width="100" align="right" class="key">
+					<label for="localisation2">
+						<?php echo JText::_( 'Localisation2' ); ?> :
+					</label>
+				</td>
+				<td>
+					<input class="text_area" type="text" name="localisation2" id="localisation2" size="32" maxlength="250" value="<?php echo $this->petition->localisation2;?>" />
+				</td>
+			</tr>
+			<tr>
+				<td width="100" align="right" class="key">
+					<label for="localisation3">
+						<?php echo JText::_( 'Localisation3' ); ?> :
+					</label>
+				</td>
+				<td>
+					<input class="text_area" type="text" name="localisation3" id="localisation3" size="32" maxlength="250" value="<?php echo $this->petition->localisation3;?>" />
+				</td>
+			</tr>
+			<tr>
+				<td width="100" align="right" class="key">
+					<label for="localisation4">
+						<?php echo JText::_( 'Localisation4' ); ?> :
+					</label>
+				</td>
+				<td>
+					<input class="text_area" type="text" name="localisation4" id="localisation4" size="32" maxlength="250" value="<?php echo $this->petition->localisation4;?>" />
+				</td>
+			</tr>
+			<tr>
+				<td valign="top" align="right" class="key">
+					<?php echo JText::_( 'Approved' ); ?> :
+				</td>
+				<td>
+					<?php echo $this->lists['approved']; ?>
+				</td>
+			</tr>
+			<tr>
+				<td valign="top" align="right" class="key">
+					<?php echo JText::_( 'Published' ); ?> :
+				</td>
+				<td>
+					<?php echo $this->lists['published']; ?>
+				</td>
+			</tr>
+			<tr>
+				<td width="100" align="right" class="key">
+					<label for="date">
+						<?php echo JText::_( 'Date' ); ?>:
+					</label>
+				</td>
+				<td>
+					<?php echo JHTML::_('calendar', $this->petition->date, 'date', 'date', '%Y-%m-%d %H:%M:%S', array('class'=>'text_area', 'size'=>'32',  'maxlength'=>'19')); ?>
+				</td>
+			</tr>
+			<tr>
+				<td valign="top" align="right" class="key">
+					<label for="catid">
+						<?php echo JText::_( 'Category' ); ?> :
+					</label>
+				</td>
+				<td>
+					<?php echo $this->lists['catid']; ?>
+				</td>
+			</tr>
+			<tr>
+				<td valign="top" align="right" class="key">
+					<label for="ordering">
+						<?php echo JText::_( 'Ordering' ); ?> :
+					</label>
+				</td>
+				<td>
+					<?php echo $this->lists['ordering']; ?>
+				</td>
+			</tr>
+		</table>
 	</fieldset>
 </div>
 <div class="col width-50">
