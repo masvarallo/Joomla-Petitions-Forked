@@ -26,7 +26,7 @@
 				</td>
 				<?php if ($this->params->get('col_mail',0)) : ?>
 					<td width="20%" height="20" class="sectiontableheader<?php echo $this->params->get( 'pageclass_sfx' ); ?>">
-						<?php echo JHTML::_('grid.sort',  'Courriel', 'mail', $this->lists['order_Dir'], $this->lists['order'] ); ?>
+						<?php echo JHTML::_('grid.sort', JText::_('petitions column number'), 'mail', $this->lists['order_Dir'], $this->lists['order'] ); ?>
 					</td>
 				<?php endif; ?>
 				<?php if ($this->params->get('col_organisation',0)) : ?>
@@ -37,7 +37,7 @@
 					<td width="20%" height="20" class="sectiontableheader<?php echo $this->params->get( 'pageclass_sfx' ); ?>">
 						<?php
 						$surnamename = JText::_( 'surname', true ).' '.JText::_( 'name', true );
-						echo JHTML::_('grid.sort',  $surnamename, 'surname', $this->lists['order_Dir'], $this->lists['order'] ); ?>
+						echo JHTML::_('grid.sort', $surnamename, 'surname', $this->lists['order_Dir'], $this->lists['order'] ); ?>
 					</td>
 				<?php if ($this->params->get('col_profession',0)) : ?>
 					<td width="20%" height="20" class="sectiontableheader<?php echo $this->params->get( 'pageclass_sfx' ); ?>">
@@ -46,20 +46,20 @@
 				<?php endif; ?>
 				<?php if ($this->params->get('col_date',0)) : ?>
 					<td width="20%" height="20" class="sectiontableheader<?php echo $this->params->get( 'pageclass_sfx' ); ?>">
-						<?php echo JHTML::_('grid.sort',  'Date', 'date', $this->lists['order_Dir'], $this->lists['order'] ); ?>
+						<?php echo JHTML::_('grid.sort', JText::_('petitions date'), 'date', $this->lists['order_Dir'], $this->lists['order'] ); ?>
 					</td>
 				<?php endif; ?>
 					<td width="20%" height="20" class="sectiontableheader<?php echo $this->params->get( 'pageclass_sfx' ); ?>">
-						<?php echo JHTML::_('grid.sort',  'Ville', 'localisation3', $this->lists['order_Dir'], $this->lists['order'] ); ?>
+						<?php echo JHTML::_('grid.sort', JText::_('petitions city'), 'localisation3', $this->lists['order_Dir'], $this->lists['order'] ); ?>
 					</td>
 				<?php if ($this->params->get('col_comment',0)) : ?>
 					<td width="20%" height="20" class="sectiontableheader<?php echo $this->params->get( 'pageclass_sfx' ); ?>">
-						<?php echo JHTML::_('grid.sort',  'Comment', 'comment', $this->lists['order_Dir'], $this->lists['order'] ); ?>
+						<?php echo JHTML::_('grid.sort', JText::_('petitions comment'), 'comment', $this->lists['order_Dir'], $this->lists['order'] ); ?>
 					</td>
 				<?php endif; ?>
 				<?php if ( $this->params->get( 'show_link_hits' ) ) : ?>
 					<td width="30" height="20" class="sectiontableheader<?php echo $this->params->get( 'pageclass_sfx' ); ?>" style="text-align:center;" nowrap="nowrap">
-						<?php echo JHTML::_('grid.sort',  'Hits', 'hits', $this->lists['order_Dir'], $this->lists['order'] ); ?>
+						<?php echo JHTML::_('grid.sort', JText::_('petitions hits'), 'hits', $this->lists['order_Dir'], $this->lists['order'] ); ?>
 					</td>
 				<?php endif; ?>
 			</tr>
@@ -106,7 +106,7 @@
 								$textcomment = $item->comment;
 							} else{
 								$img = 'publish_r.png';
-								$textcomment = JText::_( 'Pas de commentaire' );
+								$textcomment = JText::_( 'petitions comments none' );
 							}
 						?>
 						<a
@@ -114,7 +114,7 @@
 							onmouseover="return overlib(
 								'<div style="background-color:#ffffff;"><?php echo $textcomment; ?></div>',
 								CAPTION,
-								'<div style="background-color:#000000;"><?php echo JText::_( 'Signee Comment' );?></div>',
+								'<div style="background-color:#000000;"><?php echo JText::_( 'petitions signee comment' );?></div>',
 								BELOW,
 								RIGHT);"
 							onmouseout="return nd();"

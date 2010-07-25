@@ -1,7 +1,7 @@
 <?php
 //Joomla Petitions v 1.5 //
 /**
-* @ Package Joomla Petitions 
+* @ Package Joomla Petitions
 * @version $Id: export.php 2008-08-14
 * @ Copyright (C) 2007 - 2008 Milos Colic - All rights reserved
 * @ Powered by Milos Colic - www.joomlapetitions.com
@@ -26,7 +26,7 @@ class PetitionsModelExport extends JModel
 	 * @var array
 	 */
 	var $_data = null;
-	
+
 	var $_datafields;
 	/**
 	 * Category total
@@ -70,7 +70,7 @@ class PetitionsModelExport extends JModel
 	 * @access public
 	 * @return array
 	 */
-	 
+
 	function getData()
 	{
 		// Lets load the content if it doesn't already exist
@@ -89,15 +89,15 @@ class PetitionsModelExport extends JModel
 		if (empty( $this->_data ))
 		{
 			$tn = "#__ckforms_".$this->_id;
-			
-			$query = 'SELECT * from #__petitions_signataires c';							
+
+			$query = 'SELECT * from #__petitions c';
 			$this->_data = $this->_getList( $query );
-			
+
 		}
 
 		return $this->_data;
 	}*/
-	
+
 	/**
 	 * Method to get the total number of Petition items
 	 *
@@ -134,23 +134,23 @@ class PetitionsModelExport extends JModel
 		return $this->_pagination;
 	}
 
-	
+
 	function getDatafields()
 	{
 		// Lets load the data if it doesn't already exist
 		if (empty( $this->_datafields ))
 		{
 			//$tn = "#__ckforms_".$this->_id;
-						
-			$query = 'SELECT * FROM #__categories WHERE id = \'34\'';	
-								
+
+			$query = 'SELECT * FROM #__categories WHERE id = \'34\'';
+
 			$this->_datafields = $this->_getList( $query );
-			
+
 		}
 
 		return $this->_datafields;
 	}
-	
+
 	function _buildQuery()
 	{
 		$user =& JFactory::getUser();
@@ -160,7 +160,7 @@ class PetitionsModelExport extends JModel
 		$query = 'SELECT cc.*, COUNT(a.id) AS numlinks,'
 			.' CASE WHEN CHAR_LENGTH(cc.alias) THEN CONCAT_WS(\':\', cc.id, cc.alias) ELSE cc.id END as slug'
 			.' FROM #__categories AS cc'
-			.' LEFT JOIN #__petitions_signataires AS a ON a.catid = cc.id'
+			.' LEFT JOIN #__petitions AS a ON a.catid = cc.id'
 			.' WHERE a.published = 1 OR a.published = 0'
 			.' AND section = \'com_petitions\''
 			//.' AND cc.published = 1'
@@ -169,7 +169,7 @@ class PetitionsModelExport extends JModel
 
 		return $query;
 	}
-	
+
 
 
 }

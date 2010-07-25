@@ -16,7 +16,7 @@
 		<?php echo $this->category->title; ?>
 	</div>
 	<span class="small">
-			(<?php echo $this->total;?> signataires)
+			(<?php echo $this->total;?> <?php JText::_('petitions number of signees')?>)
 	</span>
 <?php endif; ?>
 

@@ -1,7 +1,7 @@
 <?php
 //Joomla Petitions v 1.5 //
 /**
-* @ Package Joomla Petitions 
+* @ Package Joomla Petitions
 * @version $Id: petition.php 2008-08-14
 * @ Copyright (C) 2007 - 2008 Milos Colic - All rights reserved
 * @ Powered by Milos Colic - www.joomlapetitions.com
@@ -33,7 +33,7 @@ class TablePetition extends JTable
 	 * @var int
 	 */
 	var $sid = null;
-	
+
 	/**
 	 * @var string
 	 */
@@ -43,7 +43,7 @@ class TablePetition extends JTable
 	 * @var string
 	 */
 	var $organisation = null;
-	
+
 	/**
 	 * @var string
 	 */
@@ -53,7 +53,7 @@ class TablePetition extends JTable
 	 * @var string
 	 */
 	var $alias = null;
-	
+
 	/**
 	 * @var string
 	 */
@@ -63,7 +63,7 @@ class TablePetition extends JTable
 	 * @var string
 	 */
 	var $name = null;
-	
+
 	/**
 	 * @var string
 	 */
@@ -72,8 +72,8 @@ class TablePetition extends JTable
 	/**
 	 * @var string
 	 */
-	var $profession = null;	 
-	
+	var $profession = null;
+
 	/**
 	 * @var string
 	 */
@@ -82,23 +82,23 @@ class TablePetition extends JTable
 	/**
 	 * @var string
 	 */
-	var $url = null;	 
-	 	 	 	 
+	var $url = null;
+
 	/**
 	 * @var string
 	 */
 	var $localisation = null;
-	
+
 	/**
 	 * @var string
 	 */
 	var $localisation2 = null;
-	
+
 	/**
 	 * @var string
 	 */
 	var $localisation3 = null;
-	
+
 	/**
 	 * @var string
 	 */
@@ -106,13 +106,13 @@ class TablePetition extends JTable
 	/**
 	 * @var int
 	 */
-	var $vote = null;	
-	
+	var $vote = null;
+
 	/**
 	 * @var string
 	 */
 	var $comment = null;
-	
+
 	/**
 	 * @var string
 	 */
@@ -166,7 +166,7 @@ class TablePetition extends JTable
 	 * @since 1.0
 	 */
 	function __construct(& $db) {
-		parent::__construct('#__petitions_signataires', 'id', $db);
+		parent::__construct('#__petitions', 'id', $db);
 	}
 
 	/**
@@ -209,19 +209,19 @@ class TablePetition extends JTable
 			$this->setError(JText::_('Your Petition must contain a surname.'));
 			return false;
 		}
-		
+
 		if (trim($this->name) == '') {
 			$this->setError(JText::_('Your Petition must contain a name.'));
 			return false;
 		}
-		
+
 		if (!(eregi('http://', $this->url) || (eregi('https://', $this->url)) || (eregi('ftp://', $this->url)))) {
 			$this->url = 'http://'.$this->url;
 		}
 		/*
 		/** check for existing name */
 		/*
-		$query = 'SELECT id FROM #__petitions_signataires WHERE surname = '.$this->_db->Quote($this->surname).' AND catid = '.(int) $this->catid;
+		$query = 'SELECT id FROM #__petitions WHERE surname = '.$this->_db->Quote($this->surname).' AND catid = '.(int) $this->catid;
 		$this->_db->setQuery($query);
 
 		$xid = intval($this->_db->loadResult());

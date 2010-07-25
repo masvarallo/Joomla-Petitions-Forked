@@ -1,7 +1,7 @@
 <?php
 //Joomla Petitions v 1.5 //
 /**
-* @ Package Joomla Petitions 
+* @ Package Joomla Petitions
 * @version $Id: petition.php 2008-08-14
 * @ Copyright (C) 2007 - 2008 Milos Colic - All rights reserved
 * @ Powered by Milos Colic - www.joomlapetitions.com
@@ -217,7 +217,7 @@ class PetitionsModelPetition extends JModel
 		{
 			JArrayHelper::toInteger($cid);
 			$cids = implode( ',', $cid );
-			$query = 'DELETE FROM #__petitions_signataires'
+			$query = 'DELETE FROM #__petitions'
 				. ' WHERE id IN ( '.$cids.' )';
 			$this->_db->setQuery( $query );
 			if(!$this->_db->query()) {
@@ -245,7 +245,7 @@ class PetitionsModelPetition extends JModel
 			JArrayHelper::toInteger($cid);
 			$cids = implode( ',', $cid );
 
-			$query = 'UPDATE #__petitions_signataires'
+			$query = 'UPDATE #__petitions'
 				. ' SET published = '.(int) $publish
 				. ' WHERE id IN ( '.$cids.' )'
 				. ' AND ( checked_out = 0 OR ( checked_out = '.(int) $user->get('id').' ) )'
@@ -335,7 +335,7 @@ class PetitionsModelPetition extends JModel
 		{
 			$query = 'SELECT w.*, cc.title AS category,'.
 					' cc.published AS cat_pub, cc.access AS cat_access'.
-					' FROM #__petitions_signataires AS w' .
+					' FROM #__petitions AS w' .
 					' LEFT JOIN #__categories AS cc ON cc.id = w.catid' .
 					' WHERE w.id = '.(int) $this->_id;
 			$this->_db->setQuery($query);

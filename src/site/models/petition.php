@@ -212,7 +212,7 @@ class PetitionsModelPetition extends JModel
 
 		// We need to get a list of all petitions in the given category
 		$query = 'SELECT *'.
-			' FROM #__petitions_signataires' .
+			' FROM #__petitions' .
 			' WHERE catid = '.(int) $this->_id.
 			' AND published = 1'.
 			' AND approved = 1'.

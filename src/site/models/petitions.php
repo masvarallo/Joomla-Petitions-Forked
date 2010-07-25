@@ -93,7 +93,7 @@ class PetitionsModelPetitions extends JModel
 		$query = 'SELECT cc.*, COUNT(a.id) AS numlinks,'
 			.' CASE WHEN CHAR_LENGTH(cc.alias) THEN CONCAT_WS(\':\', cc.id, cc.alias) ELSE cc.id END as slug'
 			.' FROM #__categories AS cc'
-			.' LEFT JOIN #__petitions_signataires AS a ON a.catid = cc.id'
+			.' LEFT JOIN #__petitions AS a ON a.catid = cc.id'
 			.' WHERE a.published = 1'
 			.' AND section = \'com_petitions\''
 			.' AND cc.published = 1'

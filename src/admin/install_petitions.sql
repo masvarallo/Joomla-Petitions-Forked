@@ -1,5 +1,5 @@
-DROP TABLE IF EXISTS `#__petitions_signataires`;
-CREATE TABLE `#__petitions_signataires` (
+DROP TABLE IF EXISTS `#__petitions`;
+CREATE TABLE `#__petitions` (
   `id` int(11) unsigned NOT NULL auto_increment,
   `catid` int(11) NOT NULL default '0',
   `sid` int(11) NOT NULL default '0',

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/component-install.dtd">
 <install type="component" version="1.5.0">
-	<name>Joomla Petitions Fork</name>
+	<name>petitions</name>
 	<creationDate>July 2010</creationDate>
 	<author>Kissaki</author>
 	<authorEmail>kissaki@gmx.de</authorEmail>
@@ -20,7 +20,7 @@
 	</install>
 	<uninstall>
 		<queries>
-			<query>DROP TABLE IF EXISTS `#__petitions_signataires`;</query>
+			<query>DROP TABLE IF EXISTS `#__petitions`;</query>
 		</queries>
 	</uninstall>
 	<files folder="site">

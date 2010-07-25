@@ -1,7 +1,7 @@
 <?php
 //Joomla Petitions v 1.5 //
 /**
-* @ Package Joomla Petitions 
+* @ Package Joomla Petitions
 * @version $Id: view.html.php 2008-08-14
 * @ Copyright (C) 2007 - 2008 Milos Colic - All rights reserved
 * @ Powered by Milos Colic - www.joomlapetitions.com
@@ -78,7 +78,7 @@ class PetitionsViewPetition extends JView
 
 		// build the html select list for ordering
 		$query = 'SELECT ordering AS value, title AS text'
-			. ' FROM #__petitions_signataires'
+			. ' FROM #__petitions'
 			. ' WHERE catid = ' . (int) $petition->catid
 			. ' ORDER BY ordering';
 
@@ -102,7 +102,7 @@ class PetitionsViewPetition extends JView
 		//$date =& JFactory::getDate($petition->date);
 		//$date->setOffset($offset);
 		//$petition->date = $date->toFormat();
-		
+
 		parent::display($tpl);
 	}
 }

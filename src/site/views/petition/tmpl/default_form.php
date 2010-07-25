@@ -163,7 +163,8 @@
 				</label>
 			</td>
 			<td width="84%">
-				<input class="inputbox required"  type="text" id="surname" name="surname" size="50" maxlength="250" value="<?php echo $this->escape($this->petition->surname);?>" />	</td>
+				<input class="inputbox required"  type="text" id="surname" name="surname" size="50" maxlength="250" value="<?php echo isset($this->petition->surname)?$this->escape($this->petition->surname):'';?>" />
+			</td>
 		</tr>
 		<tr>
 			<td width="16%">

@@ -1,7 +1,7 @@
 <?php
 //Joomla Petitions v 1.5 //
 /**
-* @ Package Joomla Petitions 
+* @ Package Joomla Petitions
 * @version $Id: petitions.php 2008-08-14
 * @ Copyright (C) 2007 - 2008 Milos Colic - All rights reserved
 * @ Powered by Milos Colic - www.joomlapetitions.com
@@ -124,7 +124,7 @@ class PetitionsModelPetitions extends JModel
 		$orderby	= $this->_buildContentOrderBy();
 
 		$query = ' SELECT a.*, cc.title AS category, u.name AS editor '
-			. ' FROM #__petitions_signataires AS a '
+			. ' FROM #__petitions AS a '
 			. ' LEFT JOIN #__categories AS cc ON cc.id = a.catid '
 			. ' LEFT JOIN #__users AS u ON u.id = a.checked_out '
 			. $where
@@ -168,7 +168,7 @@ class PetitionsModelPetitions extends JModel
 		}
 		if ($search) {
 			$where[] = 'LOWER(a.surname) LIKE '.$db->Quote( '%'.$db->getEscaped( $search, true ).'%', false );
-		}	
+		}
 		if ( $filter_state ) {
 			if ( $filter_state == 'P' ) {
 				$where[] = 'a.published = 1';

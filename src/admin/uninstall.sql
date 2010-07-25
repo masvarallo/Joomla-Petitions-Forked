@@ -1,1 +1,1 @@
-DROP TABLE IF EXISTS `#__petitions_signataires`;
+DROP TABLE IF EXISTS `#__petitions`;
