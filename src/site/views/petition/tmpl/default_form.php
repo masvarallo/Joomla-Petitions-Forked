@@ -287,7 +287,7 @@
 					</label>
 				</td>
 				<td>
-					<input class="inputbox" type="text" id="url" name="url" value="<?php echo $this->petition->url; ?>" size="50" maxlength="100" />
+					<input class="inputbox" type="text" id="url" name="url" value="<?php echo isset($this->petition->url)?$this->petition->url:''; ?>" size="50" maxlength="100" />
 				</td>
 			</tr>
 		<?php endif; ?>
@@ -299,7 +299,13 @@
 					</label>
 				</td>
 				<td>
-					<textarea class="inputbox" cols="30" rows="6" id="petitioncomment" name="comment" style="width:330px" onkeyup="Compter(this, this.form.CharRestant);"><?php echo $this->escape( $this->petition->comment);?></textarea><br/>
+					<textarea class="inputbox" cols="30" rows="6" id="petitioncomment" name="comment" style="width:330px" onkeyup="Compter(this, this.form.CharRestant);">
+						<?php
+							if (isset($var)) :
+								echo $this->escape( $this->petition->comment );
+							endif;
+						?>
+					</textarea><br/>
 					<?php echo JText::_( 'Number of remaining Chars' ); ?> : <input type='text' name='CharRestant' size='2' disabled='disabled'>
 				</td>
 			</tr>
@@ -314,20 +320,18 @@
 				<td align="left" height="40">
 					<img id="code" src="index.php?option=com_petitions&task=captcha" />
 					<a href="javascript:reloadCAPTCHA();">
-						<img src='components/com_petitions/images/reload.gif' title='Recharger le code' alt='Recharger le code' border='0' />
+						<img src="components/com_petitions/images/reload.gif" title="<?php JText::_('PETITIONS CAPTCHA REFRESH');?>" alt="<?php JText::_('PETITIONS CAPTCHA REFRESH');?>" />
 					</a>
 					<input type="text" id="ck_captcha_code" name="ck_captcha_code" size="15" maxlength="8" />
 				</td>
 			</tr>
 		<?php endif; ?>
-
 		<tr>
 			<td colspan="2" height="40">
 				<?php echo JText::_( 'Champs obligatoires' ); ?>
 			</td>
 		</tr>
 	</table>
-
 	<input type="hidden" name="catid" value="<?php echo $this->category->id; ?>" />
 	<?php if (!$this->params->get('validation_signature',0)) : ?>
 		<input type="hidden" name="published" value="1" />
@@ -343,5 +347,4 @@
 		<button class="button validate" onclick="return submitbutton();" ><?php echo JText::_('Signer') ?></button>
 		<button class="button validate" type="reset"><?php echo JText::_('Effacer') ?></button>
 	</div>
-
 </form>
