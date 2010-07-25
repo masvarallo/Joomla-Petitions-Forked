@@ -4,7 +4,7 @@
 
 <?php
 	// Set toolbar items for the page
-	$edit		= JRequest::getVar('edit',true);
+	$edit = JRequest::getVar('edit', true);
 	$text = !$edit ? JText::_( 'New' ) : JText::_( 'Edit' );
 	JToolBarHelper::title(   JText::_( 'Petition' ).': <small><small>[ ' . $text.' ]</small></small>' );
 	JToolBarHelper::save();
@@ -38,7 +38,7 @@
 		}
 	}
 </script>
-<?php /*TODO invalid style tag */ ?>
+<?php /*TODO invalid (-HTML) style tag */ ?>
 <style type="text/css">
 	table.paramlist td.paramlist_key {
 		width: 92px;
