@@ -74,10 +74,10 @@
 	<administration>
 		<menu link="option=com_petitions">Petitions</menu>
 		<submenu>
-		<menu img="components/com_petitions/images/signataires.png" link="option=com_petitions">Signataires</menu>
-		<menu img="components/com_petitions/images/petitions.png" link="option=com_categories&amp;amp;section=com_petitions">Petitions</menu>
-		<menu img="components/com_petitions/images/export.png" link="option=com_petitions&amp;amp;controller=export">Export signataires</menu>
-		<menu img="components/com_petitions/images/about.png" link="option=com_petitions&amp;amp;task=about">A propos</menu>
+			<menu img="components/com_petitions/images/signatures.png" link="option=com_petitions">Signatures</menu>
+			<menu img="components/com_petitions/images/petitions.png" link="option=com_categories&amp;amp;section=com_petitions">Petitions</menu>
+			<menu img="components/com_petitions/images/export.png" link="option=com_petitions&amp;amp;controller=export">Petitionen Exportieren</menu>
+			<menu img="components/com_petitions/images/about.png" link="option=com_petitions&amp;amp;task=about">About</menu>
 		</submenu>
 		<files folder="admin">
 				<filename>install_petitions.sql</filename>

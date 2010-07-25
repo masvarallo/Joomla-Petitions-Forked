@@ -33,7 +33,7 @@
 	<?php endif; ?>
 	<tr>
 		<td width="60%" colspan="2">
-			<?php if (!$this->params->get('signataires_masque',0)) : ?>
+			<?php if (!$this->params->get('signataires_masque', 0)) : ?>
 				<?php echo $this->loadTemplate('items'); ?>
 			<?php endif; ?>
 		</td>

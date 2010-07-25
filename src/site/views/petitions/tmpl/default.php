@@ -27,7 +27,7 @@ defined('_JEXEC') or die('Restricted access'); ?>
 			<?php echo $category->title;?></a>
 		&nbsp;
 		<span class="small">
-			(<?php echo $category->numlinks;?> signataires)
+			(<?php echo $category->numlinks;?> JText::_('PETITIONS NUMBER OF PETITIONS SUFFIX'))
 		</span>
 	</li>
 	<?php echo $category->description;?>
