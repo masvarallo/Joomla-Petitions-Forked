@@ -1,14 +1,4 @@
 <?php
-//Joomla Petitions v 1.5 //
-/**
-* @ Package Joomla Petitions
-* @ Copyright (C) 2007 - 2008 Milos Colic - All rights reserved
-* @ Powered by Milos Colic - www.joomlapetitions.com
-* @ All rights reserved
-* @ Joomla Petitions Component is Free Software
-* @ Released under GNU/GPL License : http://www.gnu.org/copyleft/gpl.html
-*/
-
 $countries = array(
 	'AF'=>'Afghanistan',
 	'AL'=>'Albania',

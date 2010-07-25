@@ -1,15 +1,4 @@
 <?php
-//Joomla Petitions v 1.5 //
-/**
-* @ Package Joomla Petitions 
-* @version $Id: petition.php 2008-08-14
-* @ Copyright (C) 2007 - 2008 Milos Colic - All rights reserved
-* @ Powered by Milos Colic - www.joomlapetitions.com
-* @ All rights reserved
-* @ Joomla Petitions Component is Free Software
-* @ Released under GNU/GPL License : http://www.gnu.org/copyleft/gpl.html
-*/
-
 // Check to ensure this file is included in Joomla!
 defined('_JEXEC') or die( 'Restricted access' );
 
@@ -40,18 +29,18 @@ class PetitionsControllerPetition extends PetitionsController
 		//get data from the request
 
 		$params =& $mainframe->getParams('com_petitions');
-	
+
 		$model = $this->getModel('petition');
-					
+
 		if ($params->get( 'use_captcha', 0 ))
 		{
 			include JPATH_COMPONENT . DS . 'captcha' . DS . 'securimage.php';
 			$img = new Securimage();
 			$valid = $img->check($_POST['ck_captcha_code']);
-			
+
 			if($valid == false) {
 				//JError::raiseWarning( 0, JText::_( "Sorry_code_invalid" ).". <a href=\"javascript:history.go(-1)\">".JText::_( "Go back" )."</a>".JText::_( "to try again" ).".");
-			
+
 				$msg = JText::_( 'Sorry_code_invalid' );
 				$type = 'error';
 
@@ -61,13 +50,13 @@ class PetitionsControllerPetition extends PetitionsController
 				return false;
 			}
 		}
-		
+
 		//$model = $this->getModel('petition');
 		$post	= JRequest::get('post');
 		$catid = $post['catid'];
 		$surname = $post['surname'];
 		$name = $post['name'];
-				
+
 		if ($model->store()) {
 
 				//avertir l'administrateur d'une nouvelle nouvelle signature
@@ -75,8 +64,8 @@ class PetitionsControllerPetition extends PetitionsController
 				$mail =& JFactory::getMailer();
 				/*
 				$db   =& JFactory::getDBO();
-				$params =& $mainframe->getParams();			
-					
+				$params =& $mainframe->getParams();
+
 				//get mail addresses of all super administrators
 				$query = 'SELECT email' .
 						' FROM #__users' .
@@ -84,12 +73,12 @@ class PetitionsControllerPetition extends PetitionsController
 				$db->setQuery( $query );
 				$admins = $db->loadResultArray();
 				*/
-				
+
 				//get entry id from request
 				$mailadmin = $params->get( 'mail_webmaster' );
-				
+
 				if ($params->get( 'copie_webmaster', 1 )){
-				
+
 						$mail->setSubject( JTEXT::_( 'New Signatary' ) );
 						$mail->setBody( JTEXT::sprintf( 'A new signature has been written', $uri->base(), $surname, $name) );
 						$mail->addBCC($mailadmin);
@@ -102,11 +91,11 @@ class PetitionsControllerPetition extends PetitionsController
 						$msg = JText::_( 'petition saved' );
 						$type = 'message';
 				}
-				
+
 			//send mail to validate new signatary by signataire
-			//PetitionsModelPetition::_sendMail();			
+			//PetitionsModelPetition::_sendMail();
 			//$msg = JText::_( 'petition saved' );
-			
+
 		} else {
 			$msg = JText::_( 'Error Saving Petition' );
 			$type = 'error';
@@ -119,5 +108,3 @@ class PetitionsControllerPetition extends PetitionsController
 
 
 }
-
-?>

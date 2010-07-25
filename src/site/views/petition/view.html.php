@@ -1,15 +1,4 @@
 <?php
-//Joomla Petitions v 1.5 //
-/**
-* @ Package Joomla Petitions 
-* @version $Id: view.html.php 2008-08-14
-* @ Copyright (C) 2007 - 2008 Milos Colic - All rights reserved
-* @ Powered by Milos Colic - www.joomlapetitions.com
-* @ All rights reserved
-* @ Joomla Petitions Component is Free Software
-* @ Released under GNU/GPL License : http://www.gnu.org/copyleft/gpl.html
-*/
-
 // Check to ensure this file is included in Joomla!
 defined( '_JEXEC' ) or die( 'Restricted access' );
 
@@ -133,4 +122,3 @@ class PetitionsViewPetition extends JView
 		parent::display($tpl);
 	}
 }
-?>

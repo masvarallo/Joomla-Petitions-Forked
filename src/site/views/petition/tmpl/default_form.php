@@ -102,9 +102,6 @@
 
 					if((Contenu.substring(StrLen-mots_interdits[i].length, StrLen).toLowerCase() == mots_interdits[i].toLowerCase()) && (mots_interdits[i].length>Constante_Doute))
 						ReInit(Contenu.substring(0, StrLen-mots_interdits[i].length), mots_interdits[i].length);
-					/*
-						script par SirJojO ===> forums http://www.editeurjavascript.com/
-					*/
 				}
 				if (StrLen > Nombre_Caracteres_Maximum ) {
 					Erreur = false;
