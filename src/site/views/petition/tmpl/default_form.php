@@ -154,6 +154,7 @@
 			</td>
 		</tr>
 		<tr>
+			<?php /*TODO forename should be first - is this actually mapped correctly later on?*/ ?>
 			<td width="16%">
 				<label for="petitionsurname">
 					<?php echo JText::_( 'Surname' ); ?> * :
@@ -166,33 +167,41 @@
 		<tr>
 			<td width="16%">
 				<label for="petitionname">
-					<?php echo JText::_( 'Name' ); ?> * :		</label>	</td>
+					<?php echo JText::_( 'Name' ); ?> * :
+				</label>
+			</td>
 			<td width="84%">
-				<input class="inputbox" type="text" id="name" name="name" size="50" maxlength="250" value="<?php echo $this->escape($this->petition->name);?>" />	</td>
+				<input class="inputbox" type="text" id="name" name="name" size="50" maxlength="250" value="<?php echo isset($this->petition->name)?$this->escape($this->petition->name):'';?>" />
+			</td>
 		</tr>
 		<tr>
 			<td width="16%">
 				<label for="petitionorganisation">
-					<?php echo JText::_( 'Organisation' ); ?> :		</label>	</td>
+					<?php echo JText::_( 'Organisation' ); ?> :
+				</label>
+			</td>
 			<td width="84%">
-				<input class="inputbox" type="text" id="petitionorganisation" name="organisation" size="50" maxlength="250" value="<?php echo $this->escape($this->petition->organisation);?>" />	</td>
+				<input class="inputbox" type="text" id="petitionorganisation" name="organisation" size="50" maxlength="250" value="<?php echo isset($this->petition->organisation)?$this->escape($this->petition->organisation):'';?>" />
+			</td>
 		</tr>
 		<?php if ($this->params->get('champ_age',0)) : ?>
 			<tr>
 				<td width="16%">
 					<label for="petitionage">
-						<?php echo JText::_( 'Age' ); ?> :		</label>	</td>
+						<?php echo JText::_( 'Age' ); ?> :
+					</label>
+				</td>
 				<td width="84%">
 					<select style="width:60px;" class="inputbox" size="1" id="petitionage" name="age">
 						<option value="" selected="selected">-----</option>
-						<option>- 18</option>
+						<option>-18</option>
 						<option>18-29</option>
 						<option>30-39</option>
 						<option>40-49</option>
 						<option>50-59</option>
-						<option>+ 59</option>
+						<option>59+</option>
 					</select>
-			    </td>
+				</td>
 			</tr>
 		<?php endif; ?>
 		<?php if ($this->params->get('champ_profession',0)) : ?>
@@ -203,7 +212,7 @@
 					</label>
 				</td>
 				<td width="84%">
-					<input class="inputbox" type="text" id="petitionprofession" name="profession" size="50" maxlength="100" value="<?php echo $this->escape($this->petition->profession);?>" />
+					<input class="inputbox" type="text" id="petitionprofession" name="profession" size="50" maxlength="100" value="<?php echo isset($this->petition->profession)?$this->escape($this->petition->profession):'';?>" />
 				</td>
 			</tr>
 		<?php endif; ?>
@@ -214,7 +223,7 @@
 				</label>
 			</td>
 			<td width="84%">
-				<input class="inputbox" type="text" id="petitionlocalisation" name="localisation" size="50" maxlength="100" value="<?php echo $this->escape($this->petition->localisation);?>" />
+				<input class="inputbox" type="text" id="petitionlocalisation" name="localisation" size="50" maxlength="100" value="<?php echo isset($this->petition->localisation)?$this->escape($this->petition->localisation):'';?>" />
 			</td>
 		</tr>
 		<tr>
@@ -224,7 +233,7 @@
 				</label>
 			</td>
 			<td width="84%">
-				<input class="inputbox" type="text" id="petitionlocalisation2" name="localisation2" size="50" maxlength="15" value="<?php echo $this->escape($this->petition->localisation2);?>" />
+				<input class="inputbox" type="text" id="petitionlocalisation2" name="localisation2" size="50" maxlength="15" value="<?php echo isset($this->petition->localisation2)?$this->escape($this->petition->localisation2):'';?>" />
 			</td>
 		</tr>
 		<tr>
@@ -232,7 +241,7 @@
 				<label for="petitionlocalisation3">
 					<?php echo JText::_( 'Localisation3' ); ?> :		</label>	</td>
 			<td width="84%">
-				<input class="inputbox" type="text" id="petitionlocalisation3" name="localisation3" size="50" maxlength="100" value="<?php echo $this->escape($this->petition->localisation3);?>" />
+				<input class="inputbox" type="text" id="petitionlocalisation3" name="localisation3" size="50" maxlength="100" value="<?php echo isset($this->petition->localisation3)?$this->escape($this->petition->localisation3):'';?>" />
 			</td>
 		</tr>
 		<tr>
