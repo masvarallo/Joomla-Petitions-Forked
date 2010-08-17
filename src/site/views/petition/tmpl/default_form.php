@@ -139,16 +139,15 @@
 		<tr>
 			<td width="16%">
 				<label for="petitiontitle">
-					<?php echo JText::_( 'Civilite' ); ?> :
+					<?php echo JText::_( 'petitions title' ); ?> :
 				</label>
 			</td>
 			<td width="84%">
 				<?php /*//TODO this is gender*/ ?>
 				<select style="width:150px;" class="inputbox" size="1" id="petitiontitle" name="title">
 					<option value="" selected="selected"><?php echo JText::_( '--- Choose ---' ); ?></option>
-					<option><?php echo JText::_( 'Civilite1' ); ?></option>
-					<option><?php echo JText::_( 'Civilite2' ); ?></option>
-					<option><?php echo JText::_( 'Civilite3' ); ?></option>
+					<option><?php echo JText::_( 'petitions title mr' ); ?></option>
+					<option><?php echo JText::_( 'petitions title mrs' ); ?></option>
 				</select>
 			</td>
 		</tr>

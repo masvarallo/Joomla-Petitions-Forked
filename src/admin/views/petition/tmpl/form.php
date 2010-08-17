@@ -65,7 +65,7 @@
 				<tr>
 					<td width="100" align="right" class="key">
 						<label for="title">
-							<?php echo JText::_( 'Civilite' ); ?> :
+							<?php echo JText::_( 'petitions title' ); ?> :
 						</label>
 					</td>
 					<td>
