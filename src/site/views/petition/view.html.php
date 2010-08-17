@@ -117,7 +117,7 @@ class PetitionsViewPetition extends JView
 		$this->assignRef('items',		$items);
 		$this->assignRef('pagination',	$pagination);
 
-		$this->assign('action',			$uri->toString());
+		$this->assign('action',			$uri->toString(array('path', 'query')));
 
 		parent::display($tpl);
 	}
