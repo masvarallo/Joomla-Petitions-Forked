@@ -9,7 +9,7 @@
 }
 </script>
 <script type="text/javascript" src="includes/js/overlib_mini.js"></script>
-<form action="<?php echo $this->action; ?>" method="post" name="adminForm">
+<form action="<?php echo JRoute::_($this->action); ?>" method="post" name="adminForm">
 	<table width="100%" border="0" cellspacing="0" cellpadding="0">
 		<tr>
 			<td align="right" colspan="4">

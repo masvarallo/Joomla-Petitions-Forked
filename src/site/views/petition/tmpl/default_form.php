@@ -124,7 +124,7 @@
 		<td><?php echo $this->error; ?></td>
 	</tr>
 <?php endif; ?>
-<form action="<?php echo $this->action ?>" method="post" name="petitionForm" id="petitionForm" >
+<form action="<?php echo JRoute::_($this->action); ?>" method="post" name="petitionForm" id="petitionForm" >
 	<div class="componentheading">
 		<?php echo JText::_( 'SIGN PETITION' );?>
 	</div>
