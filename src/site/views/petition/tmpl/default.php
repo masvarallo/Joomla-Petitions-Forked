@@ -43,7 +43,7 @@
 			<td align="center">
 				<h1>
 					<a href="javascript:formaffiche()">
-						<?php echo JText::_( 'Signer la petition', true ); ?>
+						<?php echo JText::_( 'SIGN PETITION', true ); ?>
 					</a>
 				</h1>
 			</td>

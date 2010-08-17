@@ -126,7 +126,7 @@
 <?php endif; ?>
 <form action="<?php echo $this->action ?>" method="post" name="petitionForm" id="petitionForm" >
 	<div class="componentheading">
-		<?php echo JText::_( 'Signer la petition' );?>
+		<?php echo JText::_( 'SIGN PETITION' );?>
 	</div>
 	<table cellpadding="4" cellspacing="1" border="0" width="100%">
 		<?php if ($this->params->get('champ_ip',0)) : ?>
@@ -272,7 +272,7 @@
 				</label>
 			</td>
 			<td>
-				<input class="inputbox required validate-email" type="text" id="mail" name="mail" value="<?php echo $this->petition->mail; ?>" size="50" maxlength="100" />
+				<input class="inputbox required validate-email" type="text" id="mail" name="mail" value="<?php echo (!empty($this->petition->mail)?$this->petition->mail:''); ?>" size="50" maxlength="100" />
 				<input type="checkbox" name="edit" id="petitionedit" value="1" class="inputbox required" />
 				<label for="petitionedit">
 					<?php echo JText::_( 'Edit mail' ); ?>
