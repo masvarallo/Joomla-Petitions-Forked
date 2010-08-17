@@ -243,5 +243,5 @@ $countries = array(
 
 echo '<option value="" selected="selected">'.JText::_('COM PETITIONS SELECT COUNTRY').'</option>';
 foreach ($countries as $cc=>$name) {
-	echo '<option value="'.$cc.'">'.JText::_($name);
+	echo '<option value="'.$cc.'">' . JText::_($name) . '</option>';
 }
