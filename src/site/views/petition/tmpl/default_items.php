@@ -21,44 +21,44 @@
 		</tr>
 		<?php if ( $this->params->def( 'show_headings', 1 ) ) : ?>
 			<tr>
-				<td width="10" style="text-align:right;" class="sectiontableheader<?php echo $this->params->get( 'pageclass_sfx' ); ?>">
+				<td width="10" style="text-align:right;" class="sectiontableheader<?php echo $this->params->get( 'pageclass_sfx' ); ?> head_number">
 					<?php echo JText::_('Num'); ?>
 				</td>
 				<?php if ($this->params->get('col_mail',0)) : ?>
-					<td width="20%" height="20" class="sectiontableheader<?php echo $this->params->get( 'pageclass_sfx' ); ?>">
+					<td width="20%" height="20" class="sectiontableheader<?php echo $this->params->get( 'pageclass_sfx' ); ?> head_email">
 						<?php echo JHTML::_('grid.sort', JText::_('petitions column number'), 'mail', $this->lists['order_Dir'], $this->lists['order'] ); ?>
 					</td>
 				<?php endif; ?>
 				<?php if ($this->params->get('col_organisation',0)) : ?>
-					<td width="20%" height="20" class="sectiontableheader<?php echo $this->params->get( 'pageclass_sfx' ); ?>">
+					<td width="20%" height="20" class="sectiontableheader<?php echo $this->params->get( 'pageclass_sfx' ); ?> head_org">
 						<?php echo JHTML::_('grid.sort',  'Organisation', 'organisation', $this->lists['order_Dir'], $this->lists['order'] ); ?>
 					</td>
 				<?php endif; ?>
-					<td width="20%" height="20" class="sectiontableheader<?php echo $this->params->get( 'pageclass_sfx' ); ?>">
+					<td width="20%" height="20" class="sectiontableheader<?php echo $this->params->get( 'pageclass_sfx' ); ?> head_name">
 						<?php
 						$surnamename = JText::_( 'surname', true ).' '.JText::_( 'name', true );
 						echo JHTML::_('grid.sort', $surnamename, 'surname', $this->lists['order_Dir'], $this->lists['order'] ); ?>
 					</td>
 				<?php if ($this->params->get('col_profession',0)) : ?>
-					<td width="20%" height="20" class="sectiontableheader<?php echo $this->params->get( 'pageclass_sfx' ); ?>">
+					<td width="20%" height="20" class="sectiontableheader<?php echo $this->params->get( 'pageclass_sfx' ); ?> head_profession">
 						<?php echo JHTML::_('grid.sort',  'Profession', 'profession', $this->lists['order_Dir'], $this->lists['order'] ); ?>
 					</td>
 				<?php endif; ?>
 				<?php if ($this->params->get('col_date',0)) : ?>
-					<td width="20%" height="20" class="sectiontableheader<?php echo $this->params->get( 'pageclass_sfx' ); ?>">
+					<td width="20%" height="20" class="sectiontableheader<?php echo $this->params->get( 'pageclass_sfx' ); ?> head_date">
 						<?php echo JHTML::_('grid.sort', JText::_('petitions date'), 'date', $this->lists['order_Dir'], $this->lists['order'] ); ?>
 					</td>
 				<?php endif; ?>
-					<td width="20%" height="20" class="sectiontableheader<?php echo $this->params->get( 'pageclass_sfx' ); ?>">
-						<?php echo JHTML::_('grid.sort', JText::_('petitions city'), 'localisation3', $this->lists['order_Dir'], $this->lists['order'] ); ?>
-					</td>
+				<td width="20%" height="20" class="sectiontableheader<?php echo $this->params->get( 'pageclass_sfx' ); ?> head_city">
+					<?php echo JHTML::_('grid.sort', JText::_('petitions city'), 'localisation3', $this->lists['order_Dir'], $this->lists['order'] ); ?>
+				</td>
 				<?php if ($this->params->get('col_comment',0)) : ?>
-					<td width="20%" height="20" class="sectiontableheader<?php echo $this->params->get( 'pageclass_sfx' ); ?>">
+					<td width="20%" height="20" class="sectiontableheader<?php echo $this->params->get( 'pageclass_sfx' ); ?> head_comment">
 						<?php echo JHTML::_('grid.sort', JText::_('petitions comment'), 'comment', $this->lists['order_Dir'], $this->lists['order'] ); ?>
 					</td>
 				<?php endif; ?>
 				<?php if ( $this->params->get( 'show_link_hits' ) ) : ?>
-					<td width="30" height="20" class="sectiontableheader<?php echo $this->params->get( 'pageclass_sfx' ); ?>" style="text-align:center;" nowrap="nowrap">
+					<td width="30" height="20" class="sectiontableheader<?php echo $this->params->get( 'pageclass_sfx' ); ?> head_hits" style="text-align:center;" nowrap="nowrap">
 						<?php echo JHTML::_('grid.sort', JText::_('petitions hits'), 'hits', $this->lists['order_Dir'], $this->lists['order'] ); ?>
 					</td>
 				<?php endif; ?>
@@ -66,40 +66,41 @@
 		<?php endif; ?>
 		<?php foreach ($this->items as $item) : ?>
 			<tr class="sectiontableentry<?php echo $item->odd + 1; ?>">
-				<td align="right">
+				<td class="val_number" align="right">
 					<?php echo $this->pagination->getRowOffset( $item->count ); ?>
 				</td>
-				<?php if ($this->params->get('col_mail',0) AND $item->edit=='y') { ?>
-					<td height="20">
-						<?php echo "<a href=\"mailto:$item->mail\">".JHTML::_('image', 'components/com_petitions/images/email.png', $this->escape($item->mail), 'title="'.$item->mail.'" border="0" height="16" width="16" class="png" hspace="3"')."</a>";?>
+				<?php if ($this->params->get('col_mail',0)) : ?>
+					<td class="val_email" height="20">
+						<?php
+							if ($item->edit == 'y') :
+								echo '<a href="mailto:' . $item->mail . '">' . JHTML::_('image', 'components/com_petitions/images/email.png', $this->escape($item->mail), 'title="'.$item->mail.'" border="0" height="16" width="16" class="png" hspace="3"') . '</a>';
+							endif;
+						?>
 					</td>
-				<?php } elseif ($this->params->get('col_mail',0)){?>
-					<td height="20">
-					</td>
-				<?php } ?>
+				<?php endif; ?>
 				<?php if ($this->params->get('col_organisation',0)) : ?>
-					<td>
+					<td class="val_organisation">
 						<?php echo $this->escape($item->organisation); ?>
 					</td>
 				<?php endif; ?>
-					<td>
+					<td class="val_name">
 						<?php echo $this->escape($item->surname); ?> <?php echo $this->escape($item->name); ?>
 					</td>
 				<?php if ($this->params->get('col_profession',0)) : ?>
-					<td>
+					<td class="val_profession">
 						<?php echo $this->escape($item->profession); ?>
 					</td>
 				<?php endif; ?>
 				<?php if ($this->params->get('col_date',0)) : ?>
-					<td>
+					<td class="val_date">
 						<?php echo JHTML::_('date', $item->date, "%d %B %Y %H:%M") ?>
 					</td>
 				<?php endif; ?>
-					<td>
-						<?php echo $item->localisation3; ?>
-					</td>
+				<td class="val_city">
+					<?php echo $item->localisation3; ?>
+				</td>
 				<?php if ($this->params->get('col_comment',0)) : ?>
-					<td>
+					<td class="val_comment">
 						<?php
 							if ($item->comment) {
 								$img = 'publish_g.png';
@@ -112,14 +113,14 @@
 						<a
 							href="javascript:void(0);"
 							onmouseover="return overlib(
-								'<div style="background-color:#ffffff;"><?php echo $this->escape($textcomment); ?></div>',
+								'<div style=\'background-color:#ffffff;\'><?php echo $this->escape($textcomment); ?></div>',
 								CAPTION,
-								'<div style="background-color:#000000;"><?php echo JText::_( 'petitions signee comment' );?></div>',
+								'<div style=\'background-color:#000000;\'><?php echo JText::_( 'petitions signee comment' );?></div>',
 								BELOW,
 								RIGHT);"
 							onmouseout="return nd();"
 							>
-							<img src="administrator/images/<?php echo $img;?>" width="15" height="15" border="0" alt="" />
+							<img src="administrator/images/<?php echo $img; ?>" width="15" height="15" border="0" alt="" />
 						</a>
 					</td>
 				<?php endif; ?>
