@@ -11,7 +11,7 @@ class PetitionsControllerPetition extends PetitionsController
 {
 
 	/**
-	* Saves the record  form submit
+	* Saves the record form submit
 	*
 	* @acces public
 	* @since 1.5
@@ -105,6 +105,4 @@ class PetitionsControllerPetition extends PetitionsController
 		$link = 'index.php?option=com_petitions&view=petition&id='.$_POST['catid'];
 		$this->setRedirect($link, $msg, $type);
 	}
-
-
 }

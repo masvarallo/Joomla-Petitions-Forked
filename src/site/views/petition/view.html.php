@@ -110,14 +110,14 @@ class PetitionsViewPetition extends JView
 			$item->count	= $i;
 			$k = 1 - $k;
 		}
-		$this->assignRef('total',	$total);
+		$this->assignRef('total',		$total);
 		$this->assignRef('lists',		$lists);
 		$this->assignRef('params',		$params);
 		$this->assignRef('category',	$category);
 		$this->assignRef('items',		$items);
 		$this->assignRef('pagination',	$pagination);
 
-		$this->assign('action',	$uri->toString());
+		$this->assign('action',			$uri->toString());
 
 		parent::display($tpl);
 	}
