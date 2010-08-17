@@ -9,7 +9,7 @@
 	<license>GPL2</license>
 	<copyright></copyright>
 	<version>0.1.0</version>
-	<description>Component allows hosting petitions and ppl. to sign them. This is a forked project, forked from JoomlaPetition to improve and fix it.</description>
+	<description>Component allows hosting petitions and ppl. to sign them. This is a forked project, forked from JoomlaPetition to fix and improve it.</description>
 	<installfile>install.petitions.php</installfile>
 	<uninstallfile>uninstall.petitions.php</uninstallfile>
 	<install>
@@ -90,7 +90,7 @@
 				<filename>index.html</filename>
 				<filename>petitions.php</filename>
 				<filename>images/index.html</filename>
-				<filename>images/signataires.png</filename>
+				<filename>images/signatures.png</filename>
 				<filename>images/petitions.png</filename>
 				<filename>images/export.png</filename>
 				<filename>images/donate_button.png</filename>
