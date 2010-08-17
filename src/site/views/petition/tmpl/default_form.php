@@ -42,12 +42,11 @@
 </script>
 <?php if ($this->params->get('champ_commentaire',0)) : ?>
 	<script type="text/javascript">
-		<!--// [CDATA[
-			//	Mots interdits. (ne tient pas compte de la casse : 'WaGoN' sera d�tect� comme 'wagon' )
+	/*<![CDATA[*/
+			<?php //TODO using javascript for badwords is useless – see if php censors them as well ?>
+			// bad words
 			var mots_interdits = new Array(<?php echo $this->params->get('disallowednames'); ?>);
-
-			//	Si la variable suivante est � true, les mots interdits sont remplac�s par des �toiles.
-			//	Sinon, il sont effac�s.
+			// true to replace with asterisks, false for removing them
 			var RemplacementEtoiles = true;
 
 			//	Nombre de caract�res maximum du textarea
@@ -116,7 +115,7 @@
 				Target.value = Contenu;
 				compteur.value = Nombre_Caracteres_Maximum-StrLen;
 			}
-		// ]] -->
+			/*]]>*/
 	</script>
 <?php endif; ?>
 <?php if(isset($this->error)) : ?>
