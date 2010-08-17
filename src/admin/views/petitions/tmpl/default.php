@@ -88,12 +88,12 @@
 			{
 				$row = &$this->items[$i];
 
-				$link 	= JRoute::_( 'index.php?option=com_petitions&view=petition&task=edit&cid[]='. $row->id );
+				$link = JRoute::_( 'index.php?option=com_petitions&view=petition&task=edit&cid[]='. $row->id );
 
-				$checked 	= JHTML::_('grid.checkedout',   $row, $i );
-				$published 	= JHTML::_('grid.published', $row, $i );
-				//$approved 	= JHTML::_('grid.published', $row, $i );
-				$ordering = ($this->lists['order'] == 'a.ordering');
+				$checked	= JHTML::_('grid.checkedout', $row, $i );
+				$published	= JHTML::_('grid.published', $row, $i );
+				//$approved	= JHTML::_('grid.published', $row, $i );
+				$ordering	= ($this->lists['order'] == 'a.ordering');
 
 				$row->cat_link 	= JRoute::_( 'index.php?option=com_categories&section=com_petitions&task=edit&type=other&cid[]='. $row->catid );
 				?>
@@ -110,12 +110,12 @@
 					<td align="center">
 						<?php
 							if (  JTable::isCheckedOut($this->user->get ('id'), $row->checked_out ) ) {
-								echo $row->surname;
+								echo $this->escape($row->surname);
 							} else {
 								?>
-								<span class="editlinktip hasTip" title="<?php echo JText::_( 'Edit signataire' );?>::<?php echo $row->surname; ?> <?php echo $row->name; ?>">
+								<span class="editlinktip hasTip" title="<?php echo JText::_( 'Edit signataire' );?>::<?php echo $this->escape($row->surname); ?> <?php echo $row->name; ?>">
 									<a href="<?php echo $link; ?>">
-										<?php echo $row->surname; ?>
+										<?php echo $this->escape($row->surname); ?>
 									</a>
 								</span>
 								<?php
@@ -123,10 +123,10 @@
 						?>
 					</td>
 					<td align="center">
-						<?php echo $row->name;?>
+						<?php echo $this->escape($row->name);?>
 					</td>
 					<td align="center">
-						<?php echo $row->mail;?>
+						<?php echo $this->escape($row->mail); ?>
 					</td>
 					<?php
 					if ($row->comment) {
@@ -140,10 +140,10 @@
 					<td align="center" >
 					<a
 						href="javascript: void(0);"
-						onmouseover="return overlib('<div class="Tooltip"><?php echo $textcomment; ?></div>', CAPTION, '<?php echo JText::_( 'Signee Comment' );?>', BELOW, RIGHT);"
+						onmouseover="return overlib('<div class="Tooltip"><?php echo $this->escape($textcomment); ?></div>', CAPTION, '<?php echo JText::_( 'Signee Comment' );?>', BELOW, RIGHT);"
 						onmouseout="return nd();"
 						>
-						<img src="images/<?php echo $img;?>" width="15" height="15" border="0" alt="" />
+						<img src="images/<?php echo $img; ?>" width="15" height="15" border="0" alt="" />
 					</a>
 					</td>
 					<td align="center">
