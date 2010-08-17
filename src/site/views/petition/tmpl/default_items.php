@@ -71,7 +71,7 @@
 				</td>
 				<?php if ($this->params->get('col_mail',0) AND $item->edit=='y') { ?>
 					<td height="20">
-						<?php echo "<a href=\"mailto:$item->mail\">".JHTML::_('image', 'components/com_petitions/images/email.png', $item->mail, 'title="'.$item->mail.'" border="0" height="16" width="16" class="png" hspace="3"')."</a>";?>
+						<?php echo "<a href=\"mailto:$item->mail\">".JHTML::_('image', 'components/com_petitions/images/email.png', $this->escape($item->mail), 'title="'.$item->mail.'" border="0" height="16" width="16" class="png" hspace="3"')."</a>";?>
 					</td>
 				<?php } elseif ($this->params->get('col_mail',0)){?>
 					<td height="20">
@@ -79,15 +79,15 @@
 				<?php } ?>
 				<?php if ($this->params->get('col_organisation',0)) : ?>
 					<td>
-						<?php echo $item->organisation; ?>
+						<?php echo $this->escape($item->organisation); ?>
 					</td>
 				<?php endif; ?>
 					<td>
-						<?php echo $item->surname; ?> <?php echo $item->name; ?>
+						<?php echo $this->escape($item->surname); ?> <?php echo $this->escape($item->name); ?>
 					</td>
 				<?php if ($this->params->get('col_profession',0)) : ?>
 					<td>
-						<?php echo $item->profession; ?>
+						<?php echo $this->escape($item->profession); ?>
 					</td>
 				<?php endif; ?>
 				<?php if ($this->params->get('col_date',0)) : ?>
@@ -112,7 +112,7 @@
 						<a
 							href="javascript:void(0);"
 							onmouseover="return overlib(
-								'<div style="background-color:#ffffff;"><?php echo $textcomment; ?></div>',
+								'<div style="background-color:#ffffff;"><?php echo $this->escape($textcomment); ?></div>',
 								CAPTION,
 								'<div style="background-color:#000000;"><?php echo JText::_( 'petitions signee comment' );?></div>',
 								BELOW,
