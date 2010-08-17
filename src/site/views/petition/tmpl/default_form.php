@@ -6,20 +6,20 @@
 			// do field validation
 			regex =/^[a-zA-Z0-9._-]+@([a-zA-Z0-9.-]+\.)+[a-zA-Z0-9.-]{2,4}$/;
 			regex2 = /^(([\w]+:)?\/\/)?(([\d\w]|%[a-fA-f\d]{2,2})+(:([\d\w]|%[a-fA-f\d]{2,2})+)?@)?([\d\w][-\d\w]{0,253}[\d\w]\.)+[\w]{2,4}(:[\d]+)?(\/([-+_~.\d\w]|%[a-fA-f\d]{2,2})*)*(\?(&?([-+_~.\d\w]|%[a-fA-f\d]{2,2})=?)*)?(#([-+_~.\d\w]|%[a-fA-f\d]{2,2})*)?$/;
-			if (document.getElementById('surname').value == "") {
+			if (document.getElementById('petitionsurname').value == "") {
 				alert( "<?php echo JText::_( 'Vous devez saisir votre nom.', true ); ?>" );
 				return false;
-			} else if (document.getElementById('name').value == "") {
+			} else if (document.getElementById('petitionname').value == "") {
 				alert( "<?php echo JText::_( 'Vous devez saisir votre prenom.', true ); ?>" );
 				return false;
-			} else if(document.getElementById('mail').value == "" ) {
+			} else if(document.getElementById('petitionmail').value == "" ) {
 				alert( "<?php echo JText::_( 'You must have a mail.', true ); ?>" );
 				return false;
 			} else if(!regex.test(document.getElementById('mail').value)) {
 				alert( "<?php echo JText::_( 'You must have a valid mail.', true ); ?>" );
 				return false;
 			<?php if ($this->params->get('champ_url',0)) : ?>
-			} else if((document.getElementById('url').value != "")&&(!regex2.test(document.getElementById('url').value))) {
+			} else if((document.getElementById('petitionurl').value != "")&&(!regex2.test(document.getElementById('url').value))) {
 				alert( "<?php echo JText::_( 'You must have a valid url.', true ); ?>" );
 				return false;
 			<?php endif; ?>
@@ -159,7 +159,7 @@
 				</label>
 			</td>
 			<td width="84%">
-				<input class="inputbox required"  type="text" id="surname" name="surname" size="50" maxlength="250" value="<?php echo isset($this->petition->surname)?$this->escape($this->petition->surname):'';?>" />
+				<input id="petitionsurname" class="inputbox required"  type="text" name="surname" size="50" maxlength="250" value="<?php echo isset($this->petition->surname)?$this->escape($this->petition->surname):'';?>" />
 			</td>
 		</tr>
 		<tr>
@@ -169,7 +169,7 @@
 				</label>
 			</td>
 			<td width="84%">
-				<input class="inputbox" type="text" id="name" name="name" size="50" maxlength="250" value="<?php echo isset($this->petition->name)?$this->escape($this->petition->name):'';?>" />
+				<input id="petitionname" class="inputbox" type="text" name="name" size="50" maxlength="250" value="<?php echo isset($this->petition->name)?$this->escape($this->petition->name):'';?>" />
 			</td>
 		</tr>
 		<tr>
@@ -266,8 +266,8 @@
 				</label>
 			</td>
 			<td>
-				<input class="inputbox required validate-email" type="text" id="mail" name="mail" value="<?php echo (!empty($this->petition->mail)?$this->petition->mail:''); ?>" size="50" maxlength="100" />
-				<input type="checkbox" name="edit" id="petitionedit" value="1" class="inputbox required" />
+				<input id="petitionmail" class="inputbox required validate-email" type="text" name="mail" value="<?php echo (!empty($this->petition->mail)?$this->petition->mail:''); ?>" size="50" maxlength="100" />
+				<input id="petitionedit" class="inputbox required" type="checkbox" name="edit" value="1" />
 				<label for="petitionedit">
 					<?php echo JText::_( 'Edit mail' ); ?>
 				</label>
@@ -281,7 +281,7 @@
 					</label>
 				</td>
 				<td>
-					<input class="inputbox" type="text" id="url" name="url" value="<?php echo isset($this->petition->url)?$this->petition->url:''; ?>" size="50" maxlength="100" />
+					<input id="petitionURL" class="inputbox" type="text" name="url" value="<?php echo isset($this->petition->url)?$this->petition->url:''; ?>" size="50" maxlength="100" />
 				</td>
 			</tr>
 		<?php endif; ?>
@@ -298,7 +298,7 @@
 								echo $this->escape( $this->petition->comment );
 							endif;
 						?></textarea><br/>
-					<?php echo JText::_( 'Number of remaining Chars' ); ?> : <input type='text' name='CharRestant' size='2' disabled='disabled'>
+					<?php echo JText::_( 'Number of remaining Chars' ); ?> : <input type='text' name='CharRestant' size='2' disabled='disabled' />
 				</td>
 			</tr>
 		<?php endif; ?>
