@@ -299,13 +299,11 @@
 					</label>
 				</td>
 				<td>
-					<textarea class="inputbox" cols="30" rows="6" id="petitioncomment" name="comment" style="width:330px" onkeyup="Compter(this, this.form.CharRestant);">
-						<?php
+					<textarea class="inputbox" cols="30" rows="6" id="petitioncomment" name="comment" style="width:330px" onkeyup="Compter(this, this.form.CharRestant);"><?php
 							if (isset($var)) :
 								echo $this->escape( $this->petition->comment );
 							endif;
-						?>
-					</textarea><br/>
+						?></textarea><br/>
 					<?php echo JText::_( 'Number of remaining Chars' ); ?> : <input type='text' name='CharRestant' size='2' disabled='disabled'>
 				</td>
 			</tr>
