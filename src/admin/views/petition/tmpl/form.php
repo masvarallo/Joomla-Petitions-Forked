@@ -17,7 +17,7 @@
 	JToolBarHelper::help( 'screen.petition.edit' );
 ?>
 
-<script language="javascript" type="text/javascript">
+<script type="text/javascript">
 	function submitbutton(pressbutton) {
 		var form = document.adminForm;
 		if (pressbutton == 'cancel') {

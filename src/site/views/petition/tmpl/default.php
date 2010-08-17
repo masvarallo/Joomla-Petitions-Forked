@@ -1,5 +1,5 @@
 <?php defined('_JEXEC') or die('Restricted access'); ?>
-<script language="javascript" type="text/javascript">
+<script type="text/javascript">
 	function formaffiche(){
 		document.getElementById("formsign").style.display = "block";
 		document.getElementById("cache").style.display = "inline";

@@ -1,5 +1,5 @@
 <?php defined('_JEXEC') or die('Restricted access'); ?>
-<script language="javascript" type="text/javascript">
+<script type="text/javascript">
 	/*<![CDATA[*/
 		function submitbutton()
 		{
@@ -41,7 +41,7 @@
 	}
 </script>
 <?php if ($this->params->get('champ_commentaire',0)) : ?>
-	<script language="Javascript">
+	<script type="text/javascript">
 		<!--// [CDATA[
 			//	Mots interdits. (ne tient pas compte de la casse : 'WaGoN' sera d�tect� comme 'wagon' )
 			var mots_interdits = new Array(<?php echo $this->params->get('disallowednames'); ?>);
