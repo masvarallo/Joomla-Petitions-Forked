@@ -38,7 +38,7 @@
 			<?php endif; ?>
 		</td>
 	</tr>
-	<?php if ($this->params->get('form_affmas',0)) { ?>
+	<?php if ($this->params->get('form_affmas',0)) : ?>
 		<tr id="voir" style="display:inline;">
 			<td align="center">
 				<h1>
@@ -55,14 +55,12 @@
 				</a>
 			</td>
 		</tr>
-		<tr id="formsign" style="display:none;">
-	<?php }else{ ?>
-		<tr>
-	<?php } ?>
+	<?php endif; ?>
+	<tr<?php echo ($this->params->get('form_affmas',0))?' id="formsign" style="display:none;"':''; ?>>
 		<td width="60%" colspan="2">
-		<?php if (!$this->params->get('form_masque',0)) : ?>
-			<?php echo $this->loadTemplate('form'); ?>
-		<?php endif; ?>
+			<?php if (!$this->params->get('form_masque',0)) : ?>
+				<?php echo $this->loadTemplate('form'); ?>
+			<?php endif; ?>
 		</td>
 	</tr>
 </table>
