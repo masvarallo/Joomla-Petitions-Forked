@@ -252,13 +252,9 @@
 				<select style="width:330px;" size="1" id="petitionlocalisation4" name="localisation4">
 					<?php
 						// include countries list in correct language, or fallback to en
-						$lang = JLanguage::getTag();
-						$filename = "list_of_countries_$lang.php";
-						if (file_exists(JPATH_COMPONENT.DS.$filename)) {
-							include(JPATH_COMPONENT.DS.$filename);
-						} else {
-							include(JPATH_COMPONENT.DS.'list_of_countries_en.php');
-						}
+						//TODO get lang-tag ($lang = JLanguage::getTag(); is invalid)
+						$filename = 'list_of_countries_' . (!empty($lang)?$lang:'en') . '.php';
+						include(JPATH_COMPONENT.DS.$filename);
 					?>
 				</select>
 			</td>
