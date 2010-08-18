@@ -1,7 +1,7 @@
 <?php
 //Joomla Petitions v 1.5 //
 /**
-* @ Package Joomla Petitions 
+* @ Package Joomla Petitions
 * @version $Id: view.html.php 2008-08-14
 * @ Copyright (C) 2007 - 2008 Milos Colic - All rights reserved
 * @ Powered by Milos Colic - www.joomlapetitions.com
@@ -19,7 +19,7 @@ jimport( 'joomla.application.component.view' );
 /**
  * Petitions View
  *
- * @package    Petitions
+ * @package Petitions
  */
 class PetitionsViewAbout extends JView
 {
@@ -28,10 +28,10 @@ class PetitionsViewAbout extends JView
 	 * @return void
 	 **/
 	function display($tpl = null)
-    {        
-        JToolBarHelper::title( JText::_( 'About Petitions' ), 'petitions' );
+	{
+		JToolBarHelper::title( JText::_( 'About Petitions' ), 'petitions' );
 		JHTML::_('stylesheet', 'petitions.css', 'administrator/components/com_petitions/css/');
-		
-        parent::display($tpl);
-    }
+
+		parent::display($tpl);
+	}
 }

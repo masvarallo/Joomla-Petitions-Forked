@@ -17,7 +17,7 @@ jimport('joomla.application.component.model');
 
 /**
  * Petitions Component Petition Model
-  */
+ */
 class PetitionsModelPetition extends JModel
 {
 	/**
@@ -87,7 +87,7 @@ class PetitionsModelPetition extends JModel
 				return;
 			}
 		}
-		else  $this->_initData();
+		else $this->_initData();
 
 		return $this->_data;
 	}
@@ -362,11 +362,11 @@ class PetitionsModelPetition extends JModel
 			$petition->catid			= 0;
 			$petition->sid				= 0;
 			$petition->title			= null;
-			$petition->alias            = null;
+			$petition->alias			= null;
 			$petition->surname			= null;
-			$petition->name          	= null;
-			$petition->age         		= null;
-			$petition->profession       = null;
+			$petition->name				= null;
+			$petition->age				= null;
+			$petition->profession		= null;
 			$petition->mail				= null;
 			$petition->url				= null;
 			$petition->localisation		= null;

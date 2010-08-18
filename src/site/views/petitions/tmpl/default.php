@@ -11,7 +11,7 @@ defined('_JEXEC') or die('Restricted access'); ?>
 		<tr>
 			<td valign="top" class="contentdescription<?php echo $this->params->get( 'pageclass_sfx' ); ?>">
 			<?php
-				if ( isset($this->image) ) :  echo $this->image; endif;
+				if ( isset($this->image) ) : echo $this->image; endif;
 				echo $this->params->get('comp_description');
 			?>
 			</td>

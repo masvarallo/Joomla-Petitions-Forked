@@ -35,7 +35,7 @@
 					<th class="title">
 						<?php echo JText::_( 'Titre de la petition' );?>
 					</th>
-					<th width="15%"  class="title">
+					<th width="15%" class="title">
 						<?php echo JText::_( 'Nombre de signataires' );?>
 					</th>
 					<th width="5%" nowrap="nowrap">
@@ -63,13 +63,13 @@
 				{
 					$row = &$this->items[$i];
 
-					$link 	= JRoute::_( 'index.php?option=com_petitions&view=petition&task=edit&cid[]='. $row->catid );
-					$checked 	= JHTML::_('grid.checkedout',   $row, $i );
-					$published 	= JHTML::_('grid.published', $row, $i );
-					//$approved 	= JHTML::_('grid.published', $row, $i );
-					$ordering = ($this->lists['order'] == 'a.ordering');
+					$link	= JRoute::_( 'index.php?option=com_petitions&view=petition&task=edit&cid[]='. $row->catid );
+					$checked	= JHTML::_('grid.checkedout', $row, $i );
+					$published	= JHTML::_('grid.published', $row, $i );
+					//$approved	= JHTML::_('grid.published', $row, $i );
+					$ordering	= ($this->lists['order'] == 'a.ordering');
 
-					$row->cat_link 	= JRoute::_( 'index.php?option=com_categories&section=com_petitions&task=edit&type=other&cid[]='. $row->id );
+					$row->cat_link	= JRoute::_( 'index.php?option=com_categories&section=com_petitions&task=edit&type=other&cid[]='. $row->id );
 					?>
 					<tr class="<?php echo "row$k"; ?>">
 						<td>
@@ -94,7 +94,7 @@
 						<td class="order">
 							<span><?php echo $this->pagination->orderUpIcon( $i, ($row->catid == @$this->items[$i-1]->catid),'orderup', 'Move Up', $ordering ); ?></span>
 							<span><?php echo $this->pagination->orderDownIcon( $i, $n, ($row->catid == @$this->items[$i+1]->catid), 'orderdown', 'Move Down', $ordering ); ?></span>
-							<?php $disabled = $ordering ?  '' : 'disabled="disabled"'; ?>
+							<?php $disabled = $ordering ? '' : 'disabled="disabled"'; ?>
 							<input type="text" name="order[]" size="5" value="<?php echo $row->ordering;?>" <?php echo $disabled ?> class="text_area" style="text-align: center" />
 						</td>
 						<td align="center">

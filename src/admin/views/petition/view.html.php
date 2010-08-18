@@ -17,7 +17,7 @@ jimport( 'joomla.application.component.view');
 
 /**
  * HTML View class for the Petitions component
-  */
+ */
 class PetitionsViewPetition extends JView
 {
 	function display($tpl = null)
@@ -82,13 +82,13 @@ class PetitionsViewPetition extends JView
 			. ' WHERE catid = ' . (int) $petition->catid
 			. ' ORDER BY ordering';
 
-		$lists['ordering'] 			= JHTML::_('list.specificordering',  $petition, $petition->id, $query );
+		$lists['ordering'] 			= JHTML::_('list.specificordering', $petition, $petition->id, $query );
 
 		// build list of categories
-		$lists['catid'] 			= JHTML::_('list.category',  'catid', $option, intval( $petition->catid ) );
+		$lists['catid'] 			= JHTML::_('list.category', 'catid', $option, intval( $petition->catid ) );
 		// build the html select list
-		$lists['published'] 		= JHTML::_('select.booleanlist',  'published', 'class="inputbox"', $petition->published );
-		$lists['approved'] 		= JHTML::_('select.booleanlist',  'approved', 'class="inputbox"', $petition->approved );
+		$lists['published'] 		= JHTML::_('select.booleanlist', 'published', 'class="inputbox"', $petition->published );
+		$lists['approved'] 		= JHTML::_('select.booleanlist', 'approved', 'class="inputbox"', $petition->approved );
 		//clean Petition data
 		JFilterOutput::objectHTMLSafe( $petition, ENT_QUOTES, 'description' );
 

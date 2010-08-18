@@ -29,7 +29,7 @@
 				<?php endif; ?>
 				<?php if ($this->params->get('col_organisation',0)) : ?>
 					<td width="20%" height="20" class="sectiontableheader<?php echo $this->params->get( 'pageclass_sfx' ); ?> head_org">
-						<?php echo JHTML::_('grid.sort',  'Organisation', 'organisation', $this->lists['order_Dir'], $this->lists['order'] ); ?>
+						<?php echo JHTML::_('grid.sort', 'Organisation', 'organisation', $this->lists['order_Dir'], $this->lists['order'] ); ?>
 					</td>
 				<?php endif; ?>
 					<td width="20%" height="20" class="sectiontableheader<?php echo $this->params->get( 'pageclass_sfx' ); ?> head_name">
@@ -39,7 +39,7 @@
 					</td>
 				<?php if ($this->params->get('col_profession',0)) : ?>
 					<td width="20%" height="20" class="sectiontableheader<?php echo $this->params->get( 'pageclass_sfx' ); ?> head_profession">
-						<?php echo JHTML::_('grid.sort',  'Profession', 'profession', $this->lists['order_Dir'], $this->lists['order'] ); ?>
+						<?php echo JHTML::_('grid.sort', 'Profession', 'profession', $this->lists['order_Dir'], $this->lists['order'] ); ?>
 					</td>
 				<?php endif; ?>
 				<?php if ($this->params->get('col_date',0)) : ?>

@@ -133,7 +133,7 @@
 				<td width="16%">
 				<?php echo JTEXT::_('IP address'); ?>		</td>
 				<td width="84%">
-				<input type="text" class="inputbox"  value="<?php echo $_SERVER['REMOTE_ADDR']; ?>" disabled="disabled" />		</td>
+				<input type="text" class="inputbox" value="<?php echo $_SERVER['REMOTE_ADDR']; ?>" disabled="disabled" />		</td>
 			</tr>
 		<?php endif; ?>
 		<tr>
@@ -159,7 +159,7 @@
 				</label>
 			</td>
 			<td width="84%">
-				<input id="petitionsurname" class="inputbox required"  type="text" name="surname" size="50" maxlength="250" value="<?php echo isset($this->petition->surname)?$this->escape($this->petition->surname):'';?>" />
+				<input id="petitionsurname" class="inputbox required" type="text" name="surname" size="50" maxlength="250" value="<?php echo isset($this->petition->surname)?$this->escape($this->petition->surname):'';?>" />
 			</td>
 		</tr>
 		<tr>

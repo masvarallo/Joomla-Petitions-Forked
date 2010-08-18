@@ -17,7 +17,7 @@ jimport( 'joomla.application.component.controller' );
 
 /**
  * ckdata Controller
-  */
+ */
 class PetitionsControllerExport extends JController
 {
 	/**

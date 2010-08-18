@@ -38,11 +38,11 @@ class PetitionsViewCategory extends JView
 
 			// load individual item creator class
 			$feeditem = new JFeedItem();
-			$feeditem->title 		= $title;
-			$feeditem->link 		= $link;
-			$feeditem->description 	= $description;
+			$feeditem->title		= $title;
+			$feeditem->link			= $link;
+			$feeditem->description	= $description;
 			$feeditem->date			= $date;
-			$feeditem->category   	= 'Petitions';
+			$feeditem->category		= 'Petitions';
 
 			// loads item info into rss array
 			$document->addItem( $feeditem );

@@ -6,9 +6,9 @@
 	// Set toolbar items for the page
 	$edit = JRequest::getVar('edit', true);
 	$text = !$edit ? JText::_( 'New' ) : JText::_( 'Edit' );
-	JToolBarHelper::title(   JText::_( 'Petition' ).': <small><small>[ ' . $text.' ]</small></small>' );
+	JToolBarHelper::title( JText::_( 'Petition' ).': <small><small>[ ' . $text.' ]</small></small>' );
 	JToolBarHelper::save();
-	if (!$edit)  {
+	if (!$edit) {
 		JToolBarHelper::cancel();
 	} else {
 		// for existing items the button is renamed `close`
@@ -216,7 +216,7 @@
 						</label>
 					</td>
 					<td>
-						<?php echo JHTML::_('calendar', $this->petition->date, 'date', 'date', '%Y-%m-%d %H:%M:%S', array('class'=>'text_area', 'size'=>'32',  'maxlength'=>'19')); ?>
+						<?php echo JHTML::_('calendar', $this->petition->date, 'date', 'date', '%Y-%m-%d %H:%M:%S', array('class'=>'text_area', 'size'=>'32', 'maxlength'=>'19')); ?>
 					</td>
 				</tr>
 				<tr>

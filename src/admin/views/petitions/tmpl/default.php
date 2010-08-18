@@ -4,7 +4,7 @@
 
 <?php
 	// Set toolbar items for the page
-	JToolBarHelper::title(   JText::_( 'Petition Manager' ), 'generic.png' );
+	JToolBarHelper::title( JText::_( 'Petition Manager' ), 'generic.png' );
 	JToolBarHelper::publishList();
 	JToolBarHelper::unpublishList();
 	JToolBarHelper::deleteList();
@@ -42,35 +42,35 @@
 						<input type="checkbox" name="toggle" value="" onclick="checkAll(<?php echo count( $this->items ); ?>);" />
 					</th>
 					<th class="title">
-						<?php echo JHTML::_('grid.sort',  'Date', 'a.date', $this->lists['order_Dir'], $this->lists['order'] ); ?>
+						<?php echo JHTML::_('grid.sort', 'Date', 'a.date', $this->lists['order_Dir'], $this->lists['order'] ); ?>
 					</th>
 					<th class="title">
-						<?php echo JHTML::_('grid.sort',  'Surame', 'a.surname', $this->lists['order_Dir'], $this->lists['order'] ); ?>
+						<?php echo JHTML::_('grid.sort', 'Surame', 'a.surname', $this->lists['order_Dir'], $this->lists['order'] ); ?>
 					</th>
 					<th class="title">
-						<?php echo JHTML::_('grid.sort',  'Name', 'a.name', $this->lists['order_Dir'], $this->lists['order'] ); ?>
+						<?php echo JHTML::_('grid.sort', 'Name', 'a.name', $this->lists['order_Dir'], $this->lists['order'] ); ?>
 					</th>
 					<th class="title">
-						<?php echo JHTML::_('grid.sort',  'Email', 'a.mail', $this->lists['order_Dir'], $this->lists['order'] ); ?>
+						<?php echo JHTML::_('grid.sort', 'Email', 'a.mail', $this->lists['order_Dir'], $this->lists['order'] ); ?>
 					</th>
 					<th class="title">
-						<?php echo JHTML::_('grid.sort',  'Comentaire', 'a.comment', $this->lists['order_Dir'], $this->lists['order'] ); ?>
+						<?php echo JHTML::_('grid.sort', 'Comentaire', 'a.comment', $this->lists['order_Dir'], $this->lists['order'] ); ?>
 					</th>
 					<th width="5%" nowrap="nowrap">
-						<?php echo JHTML::_('grid.sort',  'Published', 'a.published', $this->lists['order_Dir'], $this->lists['order'] ); ?>
+						<?php echo JHTML::_('grid.sort', 'Published', 'a.published', $this->lists['order_Dir'], $this->lists['order'] ); ?>
 					</th>
 					<th width="5%" nowrap="nowrap">
-						<?php echo JHTML::_('grid.sort',  'Approved', 'a.approved', $this->lists['order_Dir'], $this->lists['order'] ); ?>
+						<?php echo JHTML::_('grid.sort', 'Approved', 'a.approved', $this->lists['order_Dir'], $this->lists['order'] ); ?>
 					</th>
 					<th width="8%" nowrap="nowrap">
-						<?php echo JHTML::_('grid.sort',  'Order', 'a.ordering', $this->lists['order_Dir'], $this->lists['order'] ); ?>
-						<?php echo JHTML::_('grid.order',  $this->items ); ?>
+						<?php echo JHTML::_('grid.sort', 'Order', 'a.ordering', $this->lists['order_Dir'], $this->lists['order'] ); ?>
+						<?php echo JHTML::_('grid.order', $this->items ); ?>
 					</th>
-					<th width="15%"  class="title">
-						<?php echo JHTML::_('grid.sort',  'Category', 'category', $this->lists['order_Dir'], $this->lists['order'] ); ?>
+					<th width="15%" class="title">
+						<?php echo JHTML::_('grid.sort', 'Category', 'category', $this->lists['order_Dir'], $this->lists['order'] ); ?>
 					</th>
 					<th width="1%" nowrap="nowrap">
-						<?php echo JHTML::_('grid.sort',  'ID', 'a.id', $this->lists['order_Dir'], $this->lists['order'] ); ?>
+						<?php echo JHTML::_('grid.sort', 'ID', 'a.id', $this->lists['order_Dir'], $this->lists['order'] ); ?>
 					</th>
 				</tr>
 			</thead>
@@ -109,7 +109,7 @@
 					</td>
 					<td align="center">
 						<?php
-							if (  JTable::isCheckedOut($this->user->get ('id'), $row->checked_out ) ) {
+							if ( JTable::isCheckedOut($this->user->get ('id'), $row->checked_out ) ) {
 								echo $this->escape($row->surname);
 							} else {
 								?>
@@ -155,7 +155,7 @@
 					<td class="order">
 						<span><?php echo $this->pagination->orderUpIcon( $i, ($row->catid == @$this->items[$i-1]->catid),'orderup', 'Move Up', $ordering ); ?></span>
 						<span><?php echo $this->pagination->orderDownIcon( $i, $n, ($row->catid == @$this->items[$i+1]->catid), 'orderdown', 'Move Down', $ordering ); ?></span>
-						<?php $disabled = $ordering ?  '' : 'disabled="disabled"'; ?>
+						<?php $disabled = $ordering ? '' : 'disabled="disabled"'; ?>
 						<input type="text" name="order[]" size="5" value="<?php echo $row->ordering;?>" <?php echo $disabled ?> class="text_area" style="text-align: center" />
 					</td>
 					<td>

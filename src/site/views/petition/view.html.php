@@ -70,7 +70,7 @@ class PetitionsViewPetition extends JView
 
 		// icon in table display
 		if ( $params->get( 'link_icons' ) <> -1 ) {
-			$image = JHTML::_('image.site',  'petitions.png', '/images/M_images/', $params->get( 'petitions_icons' ), '/images/M_images/', 'Link' );
+			$image = JHTML::_('image.site', 'petitions.png', '/images/M_images/', $params->get( 'petitions_icons' ), '/images/M_images/', 'Link' );
 		}
 
 		$k = 0;

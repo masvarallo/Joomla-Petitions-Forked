@@ -1,7 +1,7 @@
 <?php
 //Joomla Petitions v 1.5 //
 /**
-* @ Package Joomla Petitions 
+* @ Package Joomla Petitions
 * @version $Id: controller.php 2008-08-14
 * @ Copyright (C) 2007 - 2008 Milos Colic - All rights reserved
 * @ Powered by Milos Colic - www.joomlapetitions.com
@@ -16,7 +16,7 @@ defined('_JEXEC') or die( 'Restricted access' );
 jimport( 'joomla.application.component.controller' );
 $version = '1.5';
 /**
- * Petitions  Petition Controller
+ * Petitions Petition Controller
  */
 class PetitionsController extends JController
 {
@@ -25,28 +25,28 @@ class PetitionsController extends JController
 		parent::__construct($config);
 
 		// Register Extra tasks
-		$this->registerTask( 'add',  'display' );
+		$this->registerTask( 'add', 'display' );
 		$this->registerTask( 'edit', 'display' );
-		
-		
+
+
 	}
 
 	function display( )
 	{
 		switch($this->getTask())
 		{
-			case 'add'     :
+			case 'add':
 			{
 				JRequest::setVar( 'hidemainmenu', 1 );
-				JRequest::setVar( 'layout', 'form'  );
-				JRequest::setVar( 'view'  , 'petition');
+				JRequest::setVar( 'layout', 'form' );
+				JRequest::setVar( 'view', 'petition');
 				JRequest::setVar( 'edit', false );
 
 				// Checkout the petition
 				$model = $this->getModel('petition');
 				$model->checkout();
 			} break;
-			case 'edit'    :
+			case 'edit':
 			{
 				JRequest::setVar( 'hidemainmenu', 1 );
 				JRequest::setVar( 'layout', 'form'  );
@@ -57,23 +57,23 @@ class PetitionsController extends JController
 				$model = $this->getModel('petition');
 				$model->checkout();
 			} break;
-			
-			case 'edit2'    :
+
+			case 'edit2':
 			{
 				JRequest::setVar( 'hidemainmenu', 1 );
-				JRequest::setVar( 'layout', 'form'  );
-				JRequest::setVar( 'view'  , 'signataire');
+				JRequest::setVar( 'layout', 'form' );
+				JRequest::setVar( 'view' , 'signataire');
 				JRequest::setVar( 'edit', true );
 
 				// Checkout the petition
 				$model = $this->getModel('signataire');
 				$model->checkout();
-			} break;
+			}
 		}
 
 		parent::display();
 	}
-	
+
 
 	function save()
 	{
@@ -211,21 +211,21 @@ class PetitionsController extends JController
 		$msg = 'New ordering saved';
 		$this->setRedirect( 'index.php?option=com_petitions', $msg );
 	}
-	
+
 	//--------
 	function about()
-    {
-    	JRequest::setVar( 'view', 'about' );
-	    JRequest::setVar( 'layout', 'default'  );
-	    
-	    parent::display();
+	{
+		JRequest::setVar( 'view', 'about' );
+		JRequest::setVar( 'layout', 'default'  );
+
+		parent::display();
 	}
-	
-	
+
+
 	function PetitionsFooter($version) {
 
 	?>
-		<p  align="center">
+		<p align="center">
 			<span style="font-size:x-small;">
 			JoomlaPetitions <?php echo $version; ?>. Copyright &copy; 2007-2008 <a href="http://www.joomlapetitions.com">JoomlaPetitions Developers</a>.<br/>
 			<a href="http://www.joomlapetitions.com">JoomlaPetitions</a> is Free Software released under the GNU/GPL License.
