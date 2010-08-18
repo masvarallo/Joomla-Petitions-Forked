@@ -10,15 +10,13 @@
 </script>
 <script type="text/javascript" src="includes/js/overlib_mini.js"></script>
 <form action="<?php echo JRoute::_($this->action); ?>" method="post" name="adminForm">
+	<div class="com_petitions_displaylimit" style="text-align:center">
+		<?php
+			echo JText::_('Display Num') .'&nbsp;';
+			echo $this->pagination->getLimitBox();
+		?>
+	</div>
 	<table width="100%" border="0" cellspacing="0" cellpadding="0">
-		<tr>
-			<td align="right" colspan="4">
-				<?php
-					echo JText::_('Display Num') .'&nbsp;';
-					echo $this->pagination->getLimitBox();
-				?>
-			</td>
-		</tr>
 		<?php if ( $this->params->def( 'show_headings', 1 ) ) : ?>
 			<tr>
 				<td width="10" style="text-align:right;" class="sectiontableheader<?php echo $this->params->get( 'pageclass_sfx' ); ?> head_number">
