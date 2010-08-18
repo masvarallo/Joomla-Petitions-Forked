@@ -30,8 +30,6 @@ class PetitionsViewAbout extends JView
 	function display($tpl = null)
 	{
 		JToolBarHelper::title( JText::_( 'About Petitions' ), 'petitions' );
-		JHTML::_('stylesheet', 'petitions.css', 'administrator/components/com_petitions/css/');
-
 		parent::display($tpl);
 	}
 }

@@ -19,12 +19,13 @@
 	<table width="100%" border="0" cellspacing="0" cellpadding="0">
 		<?php if ( $this->params->def( 'show_headings', 1 ) ) : ?>
 			<tr>
+				<?php //TODO how useful is this number column?; as this is not the entry-id or entry-number but table-row-number ?>
 				<td width="10" style="text-align:right;" class="sectiontableheader<?php echo $this->params->get( 'pageclass_sfx' ); ?> head_number">
-					<?php echo JText::_('Num'); ?>
+					<?php echo JText::_('petitions column number'); ?>
 				</td>
 				<?php if ($this->params->get('col_mail',0)) : ?>
 					<td width="20%" height="20" class="sectiontableheader<?php echo $this->params->get( 'pageclass_sfx' ); ?> head_email">
-						<?php echo JHTML::_('grid.sort', JText::_('petitions column number'), 'mail', $this->lists['order_Dir'], $this->lists['order'] ); ?>
+						<?php echo JHTML::_('grid.sort', JText::_('petitions column email'), 'mail', $this->lists['order_Dir'], $this->lists['order'] ); ?>
 					</td>
 				<?php endif; ?>
 				<?php if ($this->params->get('col_organisation',0)) : ?>
