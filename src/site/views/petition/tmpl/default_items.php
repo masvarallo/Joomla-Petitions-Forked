@@ -114,7 +114,6 @@
 							}
 						?>
 						<a
-							href="javascript:void(0);"
 							<?php echo $commentOnMouseOverAttr; ?>
 							onmouseout="return nd();"
 							>
