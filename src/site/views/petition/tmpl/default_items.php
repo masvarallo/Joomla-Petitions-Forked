@@ -101,22 +101,21 @@
 				<?php if ($this->params->get('col_comment',0)) : ?>
 					<td class="val_comment">
 						<?php
+							// default: no comment
+							$img = 'publish_r.png';
+							$commentOnMouseOverAttr = '';
 							if ($item->comment) {
 								$img = 'publish_g.png';
-								$textcomment = $item->comment;
-							} else{
-								$img = 'publish_r.png';
-								$textcomment = JText::_( 'petitions comments none' );
+								// escape for HTML output
+								$textcomment = $this->escape($item->comment);
+								// as we put the comment in JavaScript code, we need to escape it further
+								$textcomment = str_replace("'", "\\'", str_replace('\\', '\\\\', $this->escape($textcomment)));
+								$commentOnMouseOverAttr = 'onmouseover="return overlib(\'<div class=\\\'Tooltip\\\'>' . $textcomment . '</div>\', CAPTION, \'' . JText::_( 'PETITIONS SIGNEE COMMENT' ) . '\', BELOW, RIGHT);";';
 							}
 						?>
 						<a
 							href="javascript:void(0);"
-							onmouseover="return overlib(
-								'<div style=\'background-color:#ffffff;\'><?php echo $this->escape($textcomment); ?></div>',
-								CAPTION,
-								'<div style=\'background-color:#000000;\'><?php echo JText::_( 'petitions signee comment' );?></div>',
-								BELOW,
-								RIGHT);"
+							<?php echo $commentOnMouseOverAttr; ?>
 							onmouseout="return nd();"
 							>
 							<img src="administrator/images/<?php echo $img; ?>" width="15" height="15" border="0" alt="" />

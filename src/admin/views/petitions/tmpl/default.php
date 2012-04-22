@@ -129,18 +129,21 @@
 						<?php echo $this->escape($row->mail); ?>
 					</td>
 					<?php
+					// default: no comment
+					$img = 'publish_r.png';
+					$commentOnMouseOverAttr = '';
 					if ($row->comment) {
 						$img = 'publish_g.png';
-						$textcomment = $row->comment;
-					} else{
-						$img = 'publish_r.png';
-						$textcomment = JText::_( 'Pas de commentaire' );
+						// escape for HTML output
+						$textcomment = $this->escape($row->comment);
+						// as we put the comment in JavaScript code, we need to escape it further
+						$textcomment = str_replace("'", "\\'", str_replace('\\', '\\\\', $this->escape($textcomment)));
+						$commentOnMouseOverAttr = 'onmouseover="return overlib(\'<div class=\\\'Tooltip\\\'>' . $textcomment . '</div>\', CAPTION, \'' . JText::_( 'PETITIONS SIGNEE COMMENT' ) . '\', BELOW, RIGHT);";';
 					}
 					?>
 					<td align="center" >
 						<a
-							href="javascript: void(0);"
-							onmouseover="return overlib('<div class=\'Tooltip\'><?php echo $this->escape($textcomment); ?></div>', CAPTION, '<?php echo JText::_( 'Signee Comment' );?>', BELOW, RIGHT);"
+							<?php echo $commentOnMouseOverAttr; ?>
 							onmouseout="return nd();"
 							>
 							<img src="images/<?php echo $img; ?>" width="15" height="15" border="0" alt="" />
