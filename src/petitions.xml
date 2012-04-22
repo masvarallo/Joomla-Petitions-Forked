@@ -20,7 +20,8 @@
 	</install>
 	<uninstall>
 		<queries>
-			<query>DROP TABLE IF EXISTS `#__petitions`;</query>
+			<!--<query>DROP TABLE IF EXISTS `#__petitions`;</query>
+			<query>DELETE FROM `#__categories` WHERE `section` = 'com_petitions';</query>-->
 		</queries>
 	</uninstall>
 	<files folder="site">

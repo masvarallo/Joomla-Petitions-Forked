@@ -51,7 +51,7 @@
 						<?php echo JHTML::_('grid.sort', 'SIGNATURE COL NAME', 'a.name', $this->lists['order_Dir'], $this->lists['order'] ); ?>
 					</th>
 					<th class="title">
-						<?php echo JHTML::_('grid.sort', 'SIGNATURE COL EMAIL', 'a.mail', $this->lists['order_Dir'], $this->lists['order'] ); ?>
+						<?php echo JHTML::_('grid.sort', 'EMAIL', 'a.mail', $this->lists['order_Dir'], $this->lists['order'] ); ?>
 					</th>
 					<th class="title">
 						<?php echo JHTML::_('grid.sort', 'SIGNATURE COL COMMENT', 'a.comment', $this->lists['order_Dir'], $this->lists['order'] ); ?>
@@ -138,13 +138,13 @@
 					}
 					?>
 					<td align="center" >
-					<a
-						href="javascript: void(0);"
-						onmouseover="return overlib('<div class="Tooltip"><?php echo $this->escape($textcomment); ?></div>', CAPTION, '<?php echo JText::_( 'Signee Comment' );?>', BELOW, RIGHT);"
-						onmouseout="return nd();"
-						>
-						<img src="images/<?php echo $img; ?>" width="15" height="15" border="0" alt="" />
-					</a>
+						<a
+							href="javascript: void(0);"
+							onmouseover="return overlib('<div class=\'Tooltip\'><?php echo $this->escape($textcomment); ?></div>', CAPTION, '<?php echo JText::_( 'Signee Comment' );?>', BELOW, RIGHT);"
+							onmouseout="return nd();"
+							>
+							<img src="images/<?php echo $img; ?>" width="15" height="15" border="0" alt="" />
+						</a>
 					</td>
 					<td align="center">
 						<?php echo $published;?>
