@@ -42,25 +42,25 @@
 						<input type="checkbox" name="toggle" value="" onclick="checkAll(<?php echo count( $this->items ); ?>);" />
 					</th>
 					<th class="title">
-						<?php echo JHTML::_('grid.sort', 'Date', 'a.date', $this->lists['order_Dir'], $this->lists['order'] ); ?>
+						<?php echo JHTML::_('grid.sort', 'DATE', 'a.date', $this->lists['order_Dir'], $this->lists['order'] ); ?>
 					</th>
 					<th class="title">
-						<?php echo JHTML::_('grid.sort', 'Surame', 'a.surname', $this->lists['order_Dir'], $this->lists['order'] ); ?>
+						<?php echo JHTML::_('grid.sort', 'SIGNATURE COL FAMILYNAME', 'a.surname', $this->lists['order_Dir'], $this->lists['order'] ); ?>
 					</th>
 					<th class="title">
-						<?php echo JHTML::_('grid.sort', 'Name', 'a.name', $this->lists['order_Dir'], $this->lists['order'] ); ?>
+						<?php echo JHTML::_('grid.sort', 'SIGNATURE COL NAME', 'a.name', $this->lists['order_Dir'], $this->lists['order'] ); ?>
 					</th>
 					<th class="title">
-						<?php echo JHTML::_('grid.sort', 'Email', 'a.mail', $this->lists['order_Dir'], $this->lists['order'] ); ?>
+						<?php echo JHTML::_('grid.sort', 'SIGNATURE COL EMAIL', 'a.mail', $this->lists['order_Dir'], $this->lists['order'] ); ?>
 					</th>
 					<th class="title">
-						<?php echo JHTML::_('grid.sort', 'Comentaire', 'a.comment', $this->lists['order_Dir'], $this->lists['order'] ); ?>
+						<?php echo JHTML::_('grid.sort', 'SIGNATURE COL COMMENT', 'a.comment', $this->lists['order_Dir'], $this->lists['order'] ); ?>
 					</th>
 					<th width="5%" nowrap="nowrap">
-						<?php echo JHTML::_('grid.sort', 'Published', 'a.published', $this->lists['order_Dir'], $this->lists['order'] ); ?>
+						<?php echo JHTML::_('grid.sort', 'PUBLISHED', 'a.published', $this->lists['order_Dir'], $this->lists['order'] ); ?>
 					</th>
 					<th width="5%" nowrap="nowrap">
-						<?php echo JHTML::_('grid.sort', 'Approved', 'a.approved', $this->lists['order_Dir'], $this->lists['order'] ); ?>
+						<?php echo JHTML::_('grid.sort', 'SIGNATURE COL APPROVED', 'a.approved', $this->lists['order_Dir'], $this->lists['order'] ); ?>
 					</th>
 					<th width="8%" nowrap="nowrap">
 						<?php echo JHTML::_('grid.sort', 'Order', 'a.ordering', $this->lists['order_Dir'], $this->lists['order'] ); ?>
