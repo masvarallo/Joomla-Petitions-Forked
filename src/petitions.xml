@@ -8,7 +8,7 @@
 	<authorUrl>kcode.de</authorUrl>
 	<license>GPL2</license>
 	<copyright></copyright>
-	<version>0.1.0</version>
+	<version>0.2.0</version>
 	<description>Component allows hosting petitions and ppl. to sign them. This is a forked project, forked from JoomlaPetition to fix and improve it.</description>
 	<installfile>install.petitions.php</installfile>
 	<uninstallfile>uninstall.petitions.php</uninstallfile>
@@ -85,7 +85,6 @@
 				<filename>install_petitions.nonutf8.sql</filename>
 				<filename>install.petitions.php</filename>
 				<filename>uninstall.petitions.php</filename>
-				<filename>uninstall.sql</filename>
 				<filename>config.xml</filename>
 				<filename>controller.php</filename>
 				<filename>index.html</filename>
